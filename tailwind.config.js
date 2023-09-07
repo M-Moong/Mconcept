@@ -6,32 +6,46 @@ export default {
 			// 혹시 몰라서 넣어놨음. (따로 설정해주면 좋을듯함)
 			mobile: {min: '320px', max: '767px'},
 			tablet: {min: '768px', max: '1279px'},
-			desktop: {min: '1280px'},
-			contents: {max: '1280px'},
+			desktop: {min: '1920px'},
+			contents: {max: '1920px'},
 		},
 
+    
 		extend: {
-			fontFamily: {
-				이름: ['ProximaNova-Semibold'],
-				이름2: ['NotoSansKR-Medium'],
-			},
 			colors: {
-        // 임의로 설정해놓은 값.
+        // 임의로 설정해놓은 값. 수정 (지영)
 				transparent: 'transparent',
-        black: '#000000',
-        white: '#ffffff',
 				primary: '#000',
-				secondary: '#fff',
-        content: '#333333',
-        apple:'#523532',
+				secondary: '#777',
+        tertiary: '#fa5500',
+        'grey-900': '#171717',
+        'grey-800': '#313131',
+        'grey-700': '#484848',
+        'grey-600': '#616161',
+        'grey-500': '#7A7A7A',
+        'grey-400': '#959595',
+        'grey-300': '#AAAAAA',
+        'grey-200': '#CCCCCC',
+        'grey-100': '#E9E9E9',
 			},
       fontSize: {
-        sm: '0.7501875162124634rem', // 12px
-        base: '1rem', // 16px
-        lg: '1.3329999446868896rem', // 21px
-        xl: '1.7768750190734863rem', // 28px
-        '2xl': '2.3685624599456787rem', // 37px
-        '3xl': '3.1573123931884766rem', // 50px
+        xs: ['0.688rem'], // 11px
+        sm: ['0.75rem'], // 12px
+        base: ['0.875rem'], // 14px
+        lg: ['1rem'], // 16px
+        xl: ['1.375rem'], // 22x
+        '2xl': ['1.625rem'], // 26px
+        '3xl': ['2.25rem'], // 36px
+        '4xl': ['3rem'], //48px
+
+        'h1': '3rem', // 48px
+        'h2': '2.25rem', // 36px
+        'h3': '1.625rem', // 26px
+        'h4': '1.375rem', // 22px
+        'body1': '1rem', // 16px
+        'body2': '0.875rem', // 14px
+        'body3': '0.75rem', // 12px
+        'body4': '0.688rem', // 11px
       },
       borderRadius: {
         none: '0',
