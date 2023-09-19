@@ -3,13 +3,12 @@ export default {
 	content: ['./index.html', './src/**/*.jsx'],
 	theme: {
 		screens: {
-			// 혹시 몰라서 넣어놨음. (따로 설정해주면 좋을듯함)
+			// 반응형 스크린 사이즈
 			mobile: {min: '320px', max: '767px'},
 			tablet: {min: '768px', max: '1279px'},
-			desktop: {min: '1920px'},
-			contents: {max: '1920px'},
+			desktop: {min:'1279px', max: '1920px'},
+			contents: {min:'1279px', max: '1920px'},
 		},
-
     
 		extend: {
 			colors: {
@@ -33,19 +32,11 @@ export default {
         sm: ['0.75rem'], // 12px
         base: ['0.875rem'], // 14px
         lg: ['1rem'], // 16px
+        mlg: ['1.125rem'], // 18px
         xl: ['1.375rem'], // 22x
         '2xl': ['1.625rem'], // 26px
         '3xl': ['2.25rem'], // 36px
         '4xl': ['3rem'], //48px
-
-        'h1': '3rem', // 48px
-        'h2': '2.25rem', // 36px
-        'h3': '1.625rem', // 26px
-        'h4': '1.375rem', // 22px
-        'body1': '1rem', // 16px
-        'body2': '0.875rem', // 14px
-        'body3': '0.75rem', // 12px
-        'body4': '0.688rem', // 11px
       },
       borderRadius: {
         none: '0',
@@ -57,7 +48,16 @@ export default {
         '2xl': '1rem',
         '3xl': '1.0625rem',
       },
-			backgroundImage: {},
+			backgroundImage: {
+        'sprite01': "url('https://static.wconcept.co.kr/web/images/common/spr-common.png')",
+        'sprite02': "url('https://static.wconcept.co.kr/web/images/common/spr-product.png')",
+      },
+      backgroundPosition: {
+
+      },
+      fontFamily: {
+       pretendard: 'Pretendard'
+      }
 		},
 	},
 	plugins: [],

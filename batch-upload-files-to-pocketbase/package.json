@@ -1,0 +1,10 @@
+{
+  "name": "batch-upload-files-to-pockethost",
+  "version": "0.0.1",
+  "scripts": {
+    "upload": "node ./scripts/main.mjs"
+  },
+  "dependencies": {
+    "pocketbase": "0.18.0"
+  }
+}
