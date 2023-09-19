@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react';
 import sticky1 from '/public/mainPage/main_sticky_1.svg';
 import sticky2 from '/public/mainPage/main_sticky_2.svg';
 import sticky3 from '/public/mainPage/main_sticky_3.svg';
-import ShoppingHistoryPopup from '../ShoppingHistoryPopup';
+import ShoppingHistoryPopup from '@/components/ShoppingHistoryPopup';
 
 function StickyScroll() {
 	const [showTopButton, setShowTopButton] = useState(false);
