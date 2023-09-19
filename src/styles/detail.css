@@ -1,0 +1,53 @@
+.detail_dimmed {
+	opacity: 0;
+}
+
+.detail_dimmed_box:hover > .detail_dimmed {
+	opacity: 1;
+}
+
+/* .detailTabBtn {
+	border: 1px solid #999;
+} */
+
+.detailTabBtnOn {
+	border: 2px #000 solid;
+	border-bottom: 0;
+}
+
+.detailTabBtn01 {
+	border: 1px solid #999;
+	border-bottom: 2px solid black;
+	border-right: 0;
+}
+
+.detailTabBtn02 {
+	border: 1px solid #999;
+	border-bottom: 2px solid black;
+	border-right: 0;
+}
+
+.detailTabBtn03 {
+	border: 1px solid #999;
+	border-bottom: 2px solid black;
+	border-right: 0;
+}
+
+.detailTabBtn04 {
+	border: 1px solid #999;
+	border-bottom: 2px solid black;
+}
+
+.removeLine {
+	border-left: 0;
+}
+
+.text-truncate {
+	width: 195px; /* 원하는 너비로 설정하세요 */
+	display: -webkit-box;
+	-webkit-line-clamp: 2; /* 두 줄까지만 표시합니다. */
+	-webkit-box-orient: vertical; /* 세로 방향으로 텍스트를 나타냅니다. */
+	white-space: normal; /* 텍스트 줄 바꿈을 허용합니다. */
+	overflow: hidden; /* 넘치는 부분을 숨깁니다. */
+	text-overflow: ellipsis; /* 넘치는 텍스트에 말줄임표를 추가합니다. */
+}

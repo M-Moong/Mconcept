@@ -15,11 +15,11 @@ module.exports = {
 	requirePragma: false, // 파일 상단에 미리 정의된 주석을 작성하고 Pragma로 포맷팅 사용 여부 지정 (v1.8.0)
 	insertPragma: false, // 미리 정의된 @format marker의 사용 여부 (v1.8.0)
 	// ex: <div
-  //       id="unique-id"
-  //       class="contaienr"
-  //     >
+	//       id="unique-id"
+	//       class="contaienr"
+	//     >
 	bracketSameLine: false,
-	htmlWhitespaceSensitivity: 'ignore', // html 태그 사이의 content의 공백 여부 
+	htmlWhitespaceSensitivity: 'ignore', // html 태그 사이의 content의 공백 여부
 	overrides: [
 		{
 			files: '*.json',
