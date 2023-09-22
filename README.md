@@ -1,7 +1,7 @@
 [ 멋쟁이 사자처럼 🦁 프론트엔드 스쿨 6기 | **React 팀프로젝트** ]
 
 # 📄 목차
-1. [프로젝트 개요] (https://github.com/FRONTENDSCHOOL6/Mconcept/blob/main/README.md#-%ED%8C%80-%EC%86%8C%EA%B0%9C--9%EC%A1%B0--9%EA%B0%959%EC%A1%B0)
+1. [프로젝트 개요] (#-프로젝트-소개)
 
 </br>
 
