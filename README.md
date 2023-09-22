@@ -71,19 +71,17 @@
 
 # 📖 How to ...
 
-- 코딩 컨벤션 [[바로가기]](https://github.com/Rbochill/Rbochill/wiki/%F0%9F%93%9D-%EC%BD%94%EB%94%A9-%EC%BB%A8%EB%B2%A4%EC%85%98-Cording-Convention)
-- 커밋 컨밴션 [[바로가기]](https://github.com/Rbochill/Rbochill/wiki/%F0%9F%93%9D-%EC%BB%A4%EB%B0%8B-%EC%BB%A8%EB%B2%A4%EC%85%98-Commit-Convention)
-- 스프린트 회의록
-  - [2023년 7월 27일(목)](<https://github.com/Rbochill/Rbochill/wiki/%5BSptint-Meeting%5D-2023%EB%85%84-7%EC%9B%94-27%EC%9D%BC(%EB%AA%A9)>)
-  - [2023년 7월 28일(금)](<https://github.com/Rbochill/Rbochill/wiki/%5BSptint-Meeting%5D-2023%EB%85%84-7%EC%9B%94-28%EC%9D%BC(%EA%B8%88)>)
+- 코딩 컨벤션 [[바로가기]](https://github.com/FRONTENDSCHOOL6/Mconcept/wiki/%EC%BD%94%EB%94%A9-%EC%BB%A8%EB%B2%A4%EC%85%98-Coding-Convention)
+- 커밋 컨밴션 [[바로가기]](https://github.com/FRONTENDSCHOOL6/Mconcept/wiki/%EC%BB%A4%EB%B0%8B-%EC%BB%A8%EB%B2%A4%EC%85%98-Commit-Convention)
+- 파일 컨벤션 [[바로가기]](https://github.com/FRONTENDSCHOOL6/Mconcept/wiki/%ED%8F%B4%EB%8D%94,-%ED%8C%8C%EC%9D%BC-%EC%BB%A8%EB%B2%A4%EC%85%98-Folder-File-Convention)
 - 데일리 스크럼
-  - [2023년 7월 18일 ~ 8월 2일](<https://github.com/Rbochill/Rbochill/wiki/%5BDaily-Scrum%5D-2023%EB%85%84-7%EC%9B%94-28%EC%9D%BC(%EA%B8%88)>)
+  - [2023년 9월 4일 ~ 9월 5일](https://github.com/FRONTENDSCHOOL6/Mconcept/wiki/%5BDaily-Scrum%5D-2023%EB%85%84-9%EC%9B%94-04%EC%9D%BC(%EC%9B%94))
 
 </br>
 
 # 🖥️ 코드리뷰 with 구현 페이지(고정형)
 
-- 마켓 컬리 사이트를 데스크톱 1920px 고정형으로 구현하였습니다.
+- W 컨셉 사이트를 데스크톱 1920px 고정형으로 클론 코딩하였습니다.
 
 
 </br>
