@@ -23,12 +23,12 @@
  </br>
  
  #### 개인 목표
-- 신승민 : 잘하기보다는 확실하게 사이트가 구현될수 있고,
+- **신승민** : 잘하기보다는 확실하게 사이트가 구현될수 있고,
 배운 내용을 위주로 최대한 활용하여 내것으로 만들기
-- 이준석 : 끝까지 하는데까지 해보자!
-- 이수연 : 하나의 기능이라도 확실하게 내것으로 만들기
+- **이준석** : 끝까지 하는데까지 해보자!
+- **이수연** : 하나의 기능이라도 확실하게 내것으로 만들기
 작은 일이라도 책임감있게 수행하기
-- 정지영 : 수업에서 배운 내용을 최대한 활용하여 리액트와 친해지기,작은 단위의 컴포넌트라도 제대로 만들기
+- **정지영** : 수업에서 배운 내용을 최대한 활용하여 리액트와 친해지기,작은 단위의 컴포넌트라도 제대로 만들기
 
 
 </br>
@@ -66,6 +66,24 @@
   </br></br>
 
 ![image 78](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/131527467/1af53a30-909f-496d-a2a9-7c631c5d43f9)
+
+</br>
+
+# 📖 How to ...
+
+- 코딩 컨벤션 [[바로가기]](https://github.com/Rbochill/Rbochill/wiki/%F0%9F%93%9D-%EC%BD%94%EB%94%A9-%EC%BB%A8%EB%B2%A4%EC%85%98-Cording-Convention)
+- 커밋 컨밴션 [[바로가기]](https://github.com/Rbochill/Rbochill/wiki/%F0%9F%93%9D-%EC%BB%A4%EB%B0%8B-%EC%BB%A8%EB%B2%A4%EC%85%98-Commit-Convention)
+- 스프린트 회의록
+  - [2023년 7월 27일(목)](<https://github.com/Rbochill/Rbochill/wiki/%5BSptint-Meeting%5D-2023%EB%85%84-7%EC%9B%94-27%EC%9D%BC(%EB%AA%A9)>)
+  - [2023년 7월 28일(금)](<https://github.com/Rbochill/Rbochill/wiki/%5BSptint-Meeting%5D-2023%EB%85%84-7%EC%9B%94-28%EC%9D%BC(%EA%B8%88)>)
+- 데일리 스크럼
+  - [2023년 7월 18일 ~ 8월 2일](<https://github.com/Rbochill/Rbochill/wiki/%5BDaily-Scrum%5D-2023%EB%85%84-7%EC%9B%94-28%EC%9D%BC(%EA%B8%88)>)
+
+</br>
+
+# 🖥️ 코드리뷰 with 구현 페이지(고정형)
+
+- 마켓 컬리 사이트를 데스크톱 1920px 고정형으로 구현하였습니다.
 
 
 </br>
