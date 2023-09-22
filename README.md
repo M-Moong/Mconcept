@@ -44,7 +44,6 @@
 </br>
 
 # 2. 프로젝트 일정 및 계획
-</br>
 
 #### 230904~230906
 - 컨벤션 논의, 프로젝트 세팅
@@ -64,6 +63,7 @@
 
 #### 230922 ~ 230924
 - 발표자료 준비
+  </br></br>
 ![image 78](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/131527467/ea486e6e-abc0-47ef-8579-58353b1af25a){: width="400"}
 
 
