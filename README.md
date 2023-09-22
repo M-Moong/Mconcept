@@ -64,7 +64,8 @@
 #### 230922 ~ 230924
 - 발표자료 준비
   </br></br>
-![image](img src="https://github.com/FRONTENDSCHOOL6/Mconcept/assets/131527467/ea486e6e-abc0-47ef-8579-58353b1af25a" width="300")
+
+![image 78](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/131527467/c77ed520-f3af-4164-8607-cead4e593aa1)
 
 
 </br>
