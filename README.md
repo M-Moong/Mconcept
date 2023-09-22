@@ -68,7 +68,8 @@
 ![image 78](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/131527467/1af53a30-909f-496d-a2a9-7c631c5d43f9)
 
 </br>
-# 3. 📚 기술 스택
+
+# 3. 📚 기술스택
 
 ### 환경
 
