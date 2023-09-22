@@ -65,7 +65,7 @@
 - 발표자료 준비
   </br></br>
 
-![image 78](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/131527467/c77ed520-f3af-4164-8607-cead4e593aa1)
+![image 78](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/131527467/1af53a30-909f-496d-a2a9-7c631c5d43f9)
 
 
 </br>
