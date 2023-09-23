@@ -1,5 +1,5 @@
 # **[ 멋쟁이 사자처럼 🦁 프론트엔드 스쿨 6기 | **React 팀프로젝트** ]**
-![main](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/131527467/9ebf6a69-52ef-4d62-835e-5728ce878251)
+![main](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/131527467/7ce98743-6883-4132-9e2c-7595b89463bc)
 
 
 
