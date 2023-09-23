@@ -72,7 +72,7 @@
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white" /> <img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=CSS3&logoColor=white" /> <img src="https://camo.githubusercontent.com/36c57305fd24736542e2e327286081def4c4e6afb15f77cd5acdb9276947fbce/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5461696c77696e642d3036423644342e7376673f267374796c653d666f722d7468652d6261646765266c6f676f3d7461696c77696e64435353266c6f676f436f6c6f723d7768697465" />
 
 #### Language
-<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white"> <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white">
+<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black">
 
 
 #### Package Manager
