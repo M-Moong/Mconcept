@@ -102,8 +102,7 @@
 - 코딩 컨벤션 [[바로가기]](https://github.com/FRONTENDSCHOOL6/Mconcept/wiki/%EC%BD%94%EB%94%A9-%EC%BB%A8%EB%B2%A4%EC%85%98-Coding-Convention)
 - 커밋 컨밴션 [[바로가기]](https://github.com/FRONTENDSCHOOL6/Mconcept/wiki/%EC%BB%A4%EB%B0%8B-%EC%BB%A8%EB%B2%A4%EC%85%98-Commit-Convention)
 - 파일 컨벤션 [[바로가기]](https://github.com/FRONTENDSCHOOL6/Mconcept/wiki/%ED%8F%B4%EB%8D%94,-%ED%8C%8C%EC%9D%BC-%EC%BB%A8%EB%B2%A4%EC%85%98-Folder-File-Convention)
-- 데일리 스크럼
-  - [2023년 9월 4일 ~ 9월 5일](https://github.com/FRONTENDSCHOOL6/Mconcept/wiki/%5BDaily-Scrum%5D-2023%EB%85%84-9%EC%9B%94-04%EC%9D%BC(%EC%9B%94))
+- 데일리 스크럼 [[바로가기]](https://github.com/FRONTENDSCHOOL6/Mconcept/wiki)
 
 </br>
 
