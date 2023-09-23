@@ -76,7 +76,6 @@
 
 # 4. 📖 기술스택
 #### HTML & CSS
-
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white" /> <img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=CSS3&logoColor=white" /> <img src="https://camo.githubusercontent.com/36c57305fd24736542e2e327286081def4c4e6afb15f77cd5acdb9276947fbce/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5461696c77696e642d3036423644342e7376673f267374796c653d666f722d7468652d6261646765266c6f676f3d7461696c77696e64435353266c6f676f436f6c6f723d7768697465" />
 
 #### Language
@@ -84,20 +83,19 @@
 
 
 #### Package Manager
-
 <img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white" /> <img src="https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=JSON&logoColor=white" />
 
 #### Git
-
 <img src="https://img.shields.io/badge/Git-E34F26?style=for-the-badge&logo=Git&logoColor=white" /> <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white" />
 
 #### Tools
 <img src="https://img.shields.io/badge/pocketbase-B8DBE4?style=for-the-badge&logo=pocketbase&logoColor=black"> <img src="https://img.shields.io/badge/FramerMotion-0055FF?style=for-the-badge&logo=framer&logoColor=white"> <img src="https://img.shields.io/badge/vite-646CFF?style=for-the-badge&logo=vite&logoColor=white"> <img src="https://img.shields.io/badge/reactrouter-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white">
 
 #### Setting
-
 <img src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=ESLint&logoColor=white" /> <img src="https://img.shields.io/badge/Prettier-800080?style=for-the-badge&logo=Prettier&logoColor=white" />
 
+#### Design & Comunication
+<img src="https://camo.githubusercontent.com/4a1038affbb2653ec140936555b3714ddc322526be8567b489e8423a795dea18/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4669676d612d4632344531453f7374796c653d666f722d7468652d6261646765266c6f676f3d6669676d61266c6f676f436f6c6f723d7768697465"/>
 
 </br>
 
