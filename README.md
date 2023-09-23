@@ -69,20 +69,20 @@
 # 4. 📖 기술스택
 #### HTML
 
-<img src="https://github.com/M-Moong/ID-NUMBER/assets/105577805/fd7807ea-6cdb-47e5-a0dd-b77db83b3415" width="28px"/> <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white" />
+<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/105577805/249032512-fd7807ea-6cdb-47e5-a0dd-b77db83b3415.svg" width="28px"/> <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white" />
 
 #### CSS
 
-<img src="https://github.com/M-Moong/ID-NUMBER/assets/105577805/bed6550a-a5b3-48e2-a6f7-b105c6bd3455" width="28px"/> <img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=CSS3&logoColor=white" />&nbsp;&nbsp;&nbsp;<img src="https://github.com/M-Moong/ID-NUMBER/assets/105577805/24ed357f-a194-4fb5-b1b4-00dc200d04d7" width="28px"/> <img src="https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=n&logoColor=white" />
+<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/105577805/249348107-bed6550a-a5b3-48e2-a6f7-b105c6bd3455.svg" width="28px"/> <img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=CSS3&logoColor=white" />&nbsp;&nbsp;&nbsp;<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/105577805/249034249-24ed357f-a194-4fb5-b1b4-00dc200d04d7.svg" width="28px"/> <img src="https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=n&logoColor=white" />
 
 #### Package Manager
 
-<img src="https://github.com/M-Moong/ID-NUMBER/assets/105577805/98668e2c-d97a-45d0-8f75-e14084e75d09" width="28px"/> <img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white" />
+<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/105577805/249353289-98668e2c-d97a-45d0-8f75-e14084e75d09.svg" width="28px"/> <img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white" />
 <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/105577805/257673483-0fd7a655-7bbf-4c85-b47e-fecb1ef7ae07.svg" width="28px"/> <img src="https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=JSON&logoColor=white" />
 
 #### Git
 
-<img src="https://github.com/M-Moong/ID-NUMBER/assets/105577805/91c4abfd-6805-45ee-8305-c72492bd1afc" width="28px"/> <img src="https://img.shields.io/badge/Git-E34F26?style=for-the-badge&logo=Git&logoColor=white" />&nbsp;&nbsp;&nbsp;<img src="https://github.com/M-Moong/ID-NUMBER/assets/105577805/748d9e80-bf75-4d9a-bee3-4815ecaeb810" width="28px"/> <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white" />
+<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/105577805/249348424-91c4abfd-6805-45ee-8305-c72492bd1afc.svg" width="28px"/> <img src="https://img.shields.io/badge/Git-E34F26?style=for-the-badge&logo=Git&logoColor=white" />&nbsp;&nbsp;&nbsp;<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/105577805/249348736-748d9e80-bf75-4d9a-bee3-4815ecaeb810.svg" width="28px"/> <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white" />
 
 #### Tools
 
