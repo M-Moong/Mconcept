@@ -95,7 +95,7 @@
 <img src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=ESLint&logoColor=white" /> <img src="https://img.shields.io/badge/Prettier-800080?style=for-the-badge&logo=Prettier&logoColor=white" />
 
 #### Design & Communication
-<img src="https://camo.githubusercontent.com/4a1038affbb2653ec140936555b3714ddc322526be8567b489e8423a795dea18/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4669676d612d4632344531453f7374796c653d666f722d7468652d6261646765266c6f676f3d6669676d61266c6f676f436f6c6f723d7768697465"/>
+<img src="https://img.shields.io/badge/Figma-13CC83?style=for-the-badge&logo=Figma&logoColor=white"/>
 
 </br>
 
