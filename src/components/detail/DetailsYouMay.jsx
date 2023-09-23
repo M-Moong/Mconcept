@@ -1,5 +1,5 @@
 import btnNext from '../../assets/images/detail/detail_btn_next.png';
-import btnPrev from '../../assets/images/detail/detail_btn_Prev.png';
+import btnPrev from '../../assets/images/detail/detail_btn_prev.png';
 import list01_1 from '../../assets/images/detail/list01/image_1.png';
 import list01_2 from '../../assets/images/detail/list01/image_2.png';
 import list01_3 from '../../assets/images/detail/list01/image_3.png';
