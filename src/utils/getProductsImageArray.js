@@ -1,2 +1,2 @@
-const getProductsImageArray = (item, index, fileName = 'details') => `${import.meta.env.VITE_PB_API}/files/${item.collectionId}/${item.id}/${item[fileName][index]}`;
+const getProductsImageArray = (item, index, fileName = 'details') => `https://little-manchester.pockethost.io/api/files/${item.collectionId}/${item.id}/${item[fileName][index]}`;
 export default getProductsImageArray;

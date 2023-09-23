@@ -1,9 +1,17 @@
-import main1 from '@/assets/images/mainPage/main_banner_1.png';
-import main2 from '@/assets/images/mainPage/main_banner_2.png';
-import main3 from '@/assets/images/mainPage/main_banner_3.png';
-import main4 from '@/assets/images/mainPage/main_banner_4.png';
-import main5 from '@/assets/images/mainPage/main_banner_5.png';
-import main6 from '@/assets/images/mainPage/main_banner_6.png';
+import main1 from '@/assets/images/mainPage/main_banner_1.webp';
+import main2 from '@/assets/images/mainPage/main_banner_2.webp';
+import main3 from '@/assets/images/mainPage/main_banner_3.webp';
+import main4 from '@/assets/images/mainPage/main_banner_4.webp';
+import main5 from '@/assets/images/mainPage/main_banner_5.webp';
+import main6 from '@/assets/images/mainPage/main_banner_6.webp';
+import main7 from '@/assets/images/mainPage/main_banner_7.webp';
+import main8 from '@/assets/images/mainPage/main_banner_8.webp';
+import main9 from '@/assets/images/mainPage/main_banner_9.webp';
+import main10 from '@/assets/images/mainPage/main_banner_10.webp';
+import main11 from '@/assets/images/mainPage/main_banner_11.webp';
+import main12 from '@/assets/images/mainPage/main_banner_12.webp';
+import main13 from '@/assets/images/mainPage/main_banner_13.webp';
+
 import '@/styles/swiper.css';
 import {useRef} from 'react';
 import {FaPause, FaPlay} from 'react-icons/fa';
@@ -13,7 +21,7 @@ import 'swiper/css/pagination';
 import {Autoplay, Navigation, Pagination} from 'swiper/modules';
 import {Swiper, SwiperSlide} from 'swiper/react';
 
-const mainBanner = [main1, main2, main3, main4, main5, main6];
+const mainBanner = [main1, main2, main3, main4, main5, main6, main7, main8, main9, main10, main11, main12, main13];
 
 function MainArticle() {
 	const swiperRef = useRef(null);

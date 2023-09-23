@@ -1,7 +1,7 @@
-import event1 from '@/assets/images/mainPage/main_event_banner_1.png';
-import event2 from '@/assets/images/mainPage/main_event_banner_2.png';
-import event3 from '@/assets/images/mainPage/main_event_banner_3.png';
-import event4 from '@/assets/images/mainPage/main_event_banner_4.png';
+import event1 from '@/assets/images/mainPage/main_event_banner_1.webp';
+import event2 from '@/assets/images/mainPage/main_event_banner_2.webp';
+import event3 from '@/assets/images/mainPage/main_event_banner_3.webp';
+import event4 from '@/assets/images/mainPage/main_event_banner_4.webp';
 
 const eventList = [event1, event2, event3, event4];
 

@@ -67,7 +67,7 @@ function ProductCategoryItem() {
 						<Link to={`${category.eitems && category.eitems[id]}`} key={`${index}-${id}`} onClick={() => setActiveItem(item)} className={activeItem === item ? 'item-active' : ''}>
 							<dl>
 								<dt className="sr-only" aria-label="부제목"></dt>
-								<dd className='ml-2'>{item}</dd>
+								<dd className='ml-2 hover:scale-110'>{item}</dd>
 							</dl>
 						</Link>
 					))}

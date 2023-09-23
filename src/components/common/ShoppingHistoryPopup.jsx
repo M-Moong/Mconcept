@@ -101,7 +101,7 @@ function ShoppingHistoryPopup({isOpen, setIsOpen}) {
 						) : items.length > 0 ? (
 							items?.map((item) => (
 								<li key={item.id} onMouseEnter={() => setIsHovered(item.id)} onMouseLeave={() => setIsHovered(null)}>
-									<Link to={`/products/${item.id}`} className="mb-6 flex justify-stretch gap-4 hover:bg-gray-100">
+									<Link to={`/products/${item.id}`} className="mb-6 flex justify-stretch gap-4 hover:bg-gray-100 hover:scale-[98%]">
 										<div>
 											<img src={getProductsImage(item, 'photo')} alt={item.name} key={item.id} className="h-28 w-24 rounded-md" />
 										</div>
