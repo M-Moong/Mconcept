@@ -77,17 +77,15 @@
 
 #### Package Manager
 
-<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/105577805/249353289-98668e2c-d97a-45d0-8f75-e14084e75d09.svg" width="28px"/> <img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white" />
-<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/105577805/257673483-0fd7a655-7bbf-4c85-b47e-fecb1ef7ae07.svg" width="28px"/> <img src="https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=JSON&logoColor=white" />
+<img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white" /> <img src="https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=JSON&logoColor=white" />
 
 #### Git
 
-<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/105577805/249348424-91c4abfd-6805-45ee-8305-c72492bd1afc.svg" width="28px"/> <img src="https://img.shields.io/badge/Git-E34F26?style=for-the-badge&logo=Git&logoColor=white" />&nbsp;&nbsp;&nbsp;<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/105577805/249348736-748d9e80-bf75-4d9a-bee3-4815ecaeb810.svg" width="28px"/> <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white" />
+<img src="https://img.shields.io/badge/Git-E34F26?style=for-the-badge&logo=Git&logoColor=white" /> <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white" />
 
 #### Tools
 
-<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/105577805/257670370-12c1ac10-3975-47bc-b271-d8656361d9a2.svg" width="28px"/> <img src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=ESLint&logoColor=white" />
-<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/105577805/257670545-2972553a-b861-4707-a1d1-fbaf8b69f3ca.svg" width="28px"/> <img src="https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=Prettier&logoColor=white" />
+<img src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=ESLint&logoColor=white" /> <img src="https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=Prettier&logoColor=white" />
 
 
 </br>
