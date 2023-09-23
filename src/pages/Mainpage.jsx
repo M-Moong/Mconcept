@@ -26,7 +26,7 @@ function Mainpage() {
 	return (
 		<>
 			<Helmet>
-				<title>Home - M Concept</title>
+				<title>HOME | M CONCEPT</title>
 			</Helmet>
 			<div className="mx-auto max-w-[1920px]">
 				<MainArticle />

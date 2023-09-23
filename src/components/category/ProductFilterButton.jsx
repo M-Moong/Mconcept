@@ -27,10 +27,10 @@ function Button({ children, type, ...props }) {
 
 // Primary 스타일의 버튼 컴포넌트
 export function PrimaryButton({ children, ...props }) {
-   return <Button type="primary" {...props}>{children}</Button>;
+   return <Button aria-label="필터적용" type="primary" {...props}>{children}</Button>;
 }
 
 // Secondary 스타일의 버튼 컴포넌트
 export function SecondaryButton({ children, ...props }) {
-   return <Button type="secondary" {...props}>{children}</Button>;
+   return <Button aria-label="초기화" type="secondary" {...props}>{children}</Button>;
 }

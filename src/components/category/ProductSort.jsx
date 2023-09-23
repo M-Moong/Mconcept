@@ -10,7 +10,7 @@ function ProductSort() {
 				<span
 					className="float-right ml-4 mt-[2px] h-[11px] w-[11px]"
 					style={{
-						background: `url("https://static.wconcept.co.kr/web/images/common/spr-common.png") -238px 6px no-repeat`,
+						background: `url('../../public/common/sprīt.png') -238px 6px no-repeat`,
 					}}
 				></span>
 			</button>

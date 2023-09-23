@@ -1,19 +1,16 @@
 import pb from '@/api/pocketbase';
 import ProductCategory from '@/components/category/ProductCategory';
-import ProductFilterList from '@/components/category/ProductFilterList';
-import ProductsItems from '@/components/category/ProductItems';
+import ProductCoat from '@/components/category/ProductCoat';
+import ProductFilterList from '@/components/category/ProductFilterBrandList';
 import ProductNav from '@/components/category/ProductNav';
-import ProductPageNation from '@/components/category/ProductPageNation';
-import ProductSort from '@/components/category/ProductSort';
-import {useEffect, useRef, useState} from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-// import { NavLink, useNavigate } from 'react-router-dom';
 
 /**
  *  Category Page
  * */
 
-function Category() {
+function CategoryBrand() {
 	const productFilterListRef = useRef(null);
 
 	// 서버에 데이터 요청/응답
@@ -83,13 +80,13 @@ function Category() {
 	return (
 		<>
 			<Helmet>
-				<title>Man Categories - M Concept</title>
+				<title> 카테고리 | M CONCEPT </title>
 			</Helmet>
 			<main className="m-auto mt-6 flex max-w-[1980px] px-2">
 				<ProductCategory />
 
 				<section className="w-4/5">
-					<ProductNav/>
+					<ProductNav />
 
 					<ProductFilterList ref={productFilterListRef} brands={brands} onFilter={handleChangeFilter} onAssign={handleAssignFilter} onReset={handleResetFilteredBrandList} />
 
@@ -97,16 +94,14 @@ function Category() {
 						<span className="text-sm font-light text-black">
 							<em className="a11y text-mlg font-normal not-italic">{filteredProducts.length}</em> 개의 상품
 						</span>
-
-						<ProductSort />
 					</div>
 
-					<ProductsItems data={filteredProducts} />
-					<ProductPageNation />
+					<ProductCoat data={filteredProducts} />
+
 				</section>
 			</main>
 		</>
 	);
 }
 
-export default Category;
+export default CategoryBrand;

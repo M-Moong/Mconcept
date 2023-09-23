@@ -52,8 +52,8 @@ function StickyScroll() {
 			{isOpen ? (
 				<ShoppingHistoryPopup isOpen={isOpen} setIsOpen={setIsOpen} />
 			) : (
-				<div className="fixed bottom-7 right-6 flex flex-col gap-2">
-					<button className="hover:opacity-70 active:scale-90" onClick={openModal}>
+				<div className="fixed bottom-7 right-6 flex flex-col gap-2 z-50">
+					<button className="hover:opacity-70 active:scale-90 z" onClick={openModal}>
 						<img src={sticky1} alt="최근 본 상품" className="w-[2.3vw]" />
 					</button>
 					{showTopButton && (

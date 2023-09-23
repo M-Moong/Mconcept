@@ -66,7 +66,7 @@ function MainArticle() {
 							return (
 								<SwiperSlide key={item}>
 									<a href="#">
-										<img src={item} alt="" />
+										<img src={item} alt="" className='w-full h-full'/>
 									</a>
 								</SwiperSlide>
 							);
@@ -75,10 +75,10 @@ function MainArticle() {
 						<div className="swiper-button-prev" id="pnavi"></div>
 						<div className="swiper-button-next" id="nnavi"></div>
 						{/* 일시정지, 재생 버튼 */}
-						<button onClick={handlePause} className="swiperPause">
+						<button onClick={handlePause} className="swiperPause" aria-label="일시정지">
 							<FaPause className="faPause" />
 						</button>
-						<button onClick={handlePlay} className="swiperPlay">
+						<button onClick={handlePlay} className="swiperPlay" aria-label="재생">
 							<FaPlay className="faPlay" />
 						</button>
 						<div className="autoplay-progress" slot="container-end">

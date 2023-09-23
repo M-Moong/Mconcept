@@ -10,7 +10,7 @@ function VisibilityButton({isVisible, label, backgroundColor, borderColor, color
 	return (
 		<button
 			className="mt-1 p-[2px] px-1 text-center text-xs font-medium"
-			role="label"
+			type={isVisible ? 'label' : undefined}
 			aria-label={isVisible ? label : 'hide'}
 			style={{backgroundColor, border: `1px solid ${borderColor}`, color}}
 			disabled
@@ -26,7 +26,7 @@ export function NewSeasonLabel() {
 	return (
 		<div>
 			<Label isVisible={isNewSeasonVisible} label="뉴시즌" />
-			<VisibilityButton backgroundColor="#fa5500" color="white" isVisible={isNewSeasonVisible} label="뉴시즌" />
+			<VisibilityButton backgroundColor="#fa5500" color="white" isVisible={isNewSeasonVisible} label="뉴시즌" aria-label="뉴시즌" />
 		</div>
 	);
 }
@@ -37,7 +37,7 @@ export function CelebrityLabel() {
 	return (
 		<div>
 			<Label isVisible={isCelebVisible} label="셀럽착용" />
-			<VisibilityButton backgroundColor="white" borderColor="grey" color="grey" isVisible={isCelebVisible} label="셀럽착용" />
+			<VisibilityButton backgroundColor="white" borderColor="grey" color="grey" isVisible={isCelebVisible} label="셀럽착용" aria-label="셀럽착용" />
 		</div>
 	);
 }
@@ -48,7 +48,7 @@ export function CouponLabel() {
 	return (
 		<div>
 			<Label isVisible={isCouponvisible} label="쿠폰" />
-			<VisibilityButton backgroundColor="black" color="white" isVisible={isCouponvisible} label="쿠폰" />
+			<VisibilityButton backgroundColor="black" color="white" isVisible={isCouponvisible} label="쿠폰" aria-label="쿠폰" />
 		</div>
 	);
 }
@@ -59,7 +59,7 @@ export function OnlyLabel() {
 	return (
 		<div>
 			<Label isVisible={isOnlyVisible} label="단독판매 " />
-			<VisibilityButton backgroundColor="white" borderColor="grey" color="grey" isVisible={isOnlyVisible} label="단독판매 " />
+			<VisibilityButton backgroundColor="white" borderColor="grey" color="grey" isVisible={isOnlyVisible} label="단독판매" aria-label="단독판매" />
 		</div>
 	);
 }

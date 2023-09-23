@@ -63,7 +63,7 @@
 .swiper-pagination-bullet {
 	width: 14px;
 	height: 14px;
-	background-color: rgb(79, 79, 79);
+	background-color: rgb(79, 79, 79) !important;
 }
 
 .swiper-pagination-bullet:active {

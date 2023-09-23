@@ -1,6 +1,7 @@
 import {forwardRef, useState} from 'react';
 import {PrimaryButton, SecondaryButton} from '@/components/category/ProductFilterButton';
 import {ProductFilterBrand, ProductFilterPrice, ProductFilterBenefit, ProductFilterColor, ProductFilterDiscount} from '@/components/category/ProductFilter';
+import { Link } from 'react-router-dom';
 
 /**
  *  ProductFilterList component
@@ -17,28 +18,28 @@ function ProductFilterList({colors, onFilter, onAssign, onReset}, ref) {
 					<button
 						className="float-right ml-4 mt-[6.5px] h-[11px] w-[11px]"
 						style={{
-							background: `url("https://static.wconcept.co.kr/web/images/common/spr-common.png") 0 -60px no-repeat`,
+							background: `url('../../public/common/sprīt.png') 0 -60px no-repeat`,
 						}}
 						type="button"
 					></button>
 				</h4>
 				<ul className="filter-nav flex gap-24">
-					<li>
+				<Link to="/categoryBrand">
 						<button type="button" onClick={() => setActiveFilter('BRAND')} style={{color: activeFilter === 'BRAND' ? '#fa5500' : 'initial'}}>
 							BRAND
 						</button>
-					</li>
+					</Link>
 
 					<li>
 						<button type="button" onClick={() => setActiveFilter('BENEFIT')} style={{color: activeFilter === 'BENEFIT' ? '#fa5500' : 'initial'}}>
 							BENEFIT
 						</button>
 					</li>
-					<li>
+					<Link to="/categoryColor">
 						<button type="button" onClick={() => setActiveFilter('COLOR')} style={{color: activeFilter === 'COLOR' ? '#fa5500' : 'initial'}}>
 							COLOR
 						</button>
-					</li>
+					</Link>
 					<li>
 						<button type="button" onClick={() => setActiveFilter('DISCOUNT')} style={{color: activeFilter === 'DISCOUNT' ? '#fa5500' : 'initial'}}>
 							DISCOUNT
