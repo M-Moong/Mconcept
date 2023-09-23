@@ -105,7 +105,7 @@
 - 커밋 컨밴션 [[바로가기]](https://github.com/FRONTENDSCHOOL6/Mconcept/wiki/%EC%BB%A4%EB%B0%8B-%EC%BB%A8%EB%B2%A4%EC%85%98-Commit-Convention)
 - 파일 컨벤션 [[바로가기]](https://github.com/FRONTENDSCHOOL6/Mconcept/wiki/%ED%8F%B4%EB%8D%94,-%ED%8C%8C%EC%9D%BC-%EC%BB%A8%EB%B2%A4%EC%85%98-Folder-File-Convention)
 - 데일리 스크럼 [[바로가기]](https://github.com/FRONTENDSCHOOL6/Mconcept/wiki)
-- 마일스톤</br>
+- 마일스톤 관리</br>
 ![image 83 (1)](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/131527467/8ba18190-4cf8-4a68-92c4-657de8da47a9)
 
 
