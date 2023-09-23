@@ -2,7 +2,7 @@ import story1 from '@/assets/images/mainPage/main_story_1.png';
 import story2 from '@/assets/images/mainPage/main_story_2.png';
 import story3 from '@/assets/images/mainPage/main_story_3.png';
 import story4 from '@/assets/images/mainPage/main_story_4.png';
-import {motion} from "framer-motion";
+import {motion} from 'framer-motion';
 
 const storyList = [
 	{
@@ -30,32 +30,27 @@ const storyList = [
 function StyleStory() {
 	return (
 		<>
-		<section>
-		<h2 className="mb-8 text-center text-[54px] font-thin">STYLE STORY</h2>
-			<ul className="flex justify-between gap-5">
-				{storyList.map((item) => {
-					return (
-						<li key={item.title}>
-							<a href="">
-								<figure>
-									<motion.img src={item.img} alt={item.title} 
-									whileHover={{ scale: 1.05 }}
-									whileTap={{ scale: 1.02 }}
-									drag="x"
-									dragConstraints={{ left: -100, right: 100 }}
-									/>
-									<dl>
-										<dt aria-label="제목"></dt>
-										<dd className="my-6 text-center text-2xl font-semibold">{item.title}</dd>
-										<dt aria-label="설명"></dt>
-										<dd className="text-center text-base text-gray-500 whitespace-pre-line">{item.description}</dd>
-									</dl>
-								</figure>
-							</a>
-						</li>
-					);
-				})}
-			</ul>
+			<section className="mb-32">
+				<h2 className="mb-8 text-center text-[54px] font-thin">STYLE STORY</h2>
+				<ul className="flex justify-between gap-10 px-2">
+					{storyList.map((item) => {
+						return (
+							<li key={item.title}>
+								<a href="">
+									<figure>
+										<motion.img src={item.img} alt={item.title} whileHover={{scale: 1.05}} whileTap={{scale: 1.02}} drag="x" dragConstraints={{left: -100, right: 100}} />
+										<dl>
+											<dt aria-label="제목"></dt>
+											<dd className="my-6 text-center text-2xl font-semibold">{item.title}</dd>
+											<dt aria-label="설명"></dt>
+											<dd className="whitespace-pre-line text-center text-base text-gray-500">{item.description}</dd>
+										</dl>
+									</figure>
+								</a>
+							</li>
+						);
+					})}
+				</ul>
 			</section>
 		</>
 	);

@@ -13,6 +13,7 @@
 .detailTabBtnOn {
 	border: 2px #000 solid;
 	border-bottom: 0;
+	color: #000;
 }
 
 .detailTabBtn01 {
@@ -50,4 +51,26 @@
 	white-space: normal; /* 텍스트 줄 바꿈을 허용합니다. */
 	overflow: hidden; /* 넘치는 부분을 숨깁니다. */
 	text-overflow: ellipsis; /* 넘치는 텍스트에 말줄임표를 추가합니다. */
+}
+
+.zoom-lens-container {
+	position: relative;
+	width: 300px;
+	height: auto;
+}
+
+.zoom-lens-container img {
+	width: 100%;
+	height: auto;
+}
+
+.lens {
+	position: absolute;
+	right: -310px; /* Adjust this value according to your preference */
+	width: 300px; /* Adjust this value according to your preference */
+	height: auto; /* Adjust this value according to your preference */
+	border: 1px solid #000;
+	background-repeat: no-repeat;
+	background-size: auto !important; /* This is important to override inline styles */
+	transform: scale(2); /* Change the zoom level here */
 }

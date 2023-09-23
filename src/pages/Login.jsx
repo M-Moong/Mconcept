@@ -1,11 +1,12 @@
 import pb from '@/api/pocketbase';
-import {LoginButton} from '@/components/LoginButton';
-import {LoginInput} from '@/components/LoginInput';
+import {LoginButton} from '@/components/login/LoginButton';
+import {LoginInput} from '@/components/login/LoginInput';
 import {useAuth} from '@/contexts/Auth';
 import debounce from '@/utils/debounce';
 import {useState} from 'react';
+import {Helmet} from 'react-helmet-async';
 import toast from 'react-hot-toast';
-import {useLocation, useNavigate} from 'react-router-dom';
+import {NavLink, useLocation, useNavigate} from 'react-router-dom';
 
 function Login() {
 	const {state} = useLocation();
@@ -60,12 +61,14 @@ function Login() {
 
 	const [isChecked, setIsChecked] = useState(false);
 	const handleCheckboxChange = () => {
-		console.log('test');
 		setIsChecked(!isChecked);
 	};
 
 	return (
 		<>
+			<Helmet>
+				<title>Login | M CONCEPT</title>
+			</Helmet>
 			<section className="mx-[auto] w-[1240px]">
 				<h1 className=" mb-[42px] mt-[60px] text-center text-[41px]">LOGIN</h1>
 				<h2 className="sr-only">로그인 정보 입력</h2>
@@ -94,7 +97,7 @@ function Login() {
 								<input checked={isChecked} onChange={handleCheckboxChange} className="absolute left-[0] top-[0] z-[1] h-[25px] w-[25px] opacity-0" type="checkbox" id="saveEmail" name="saveEmail" />
 								<label
 									htmlFor="saveEmail"
-									className={` relative block pl-[35px] text-left text-[14px] leading-[25px] before:absolute before:left-0 before:top-0 before:h-[25px] before:w-[25px] before:bg-[url('../../public/sprīt_2.png')] before:bg-no-repeat before:content-['']
+									className={` relative block pl-[35px] text-left text-[14px] leading-[25px] before:absolute before:left-0 before:top-0 before:h-[25px] before:w-[25px] before:bg-[url('../../public/common/sprīt_2.png')] before:bg-no-repeat before:content-['']
 									${isChecked ? 'before:bg-[left_-30px_top_0px]' : ''}`}
 								>
 									이메일 아이디 저장
@@ -109,9 +112,12 @@ function Login() {
 						지금 가입하면 <strong>10% 할인 쿠폰+웰컴 쿠폰팩</strong> 증정
 					</p>
 					<div className="w-[326px]">
-						<a href="/" className="block h-[50px] w-[100%] min-w-[180px] border-[1px] border-solid border-[rgb(51,51,51)] bg-[#fff] px-[20px] text-center text-[14px] leading-[48px] text-[#000]">
+						<NavLink
+							to={'/join'}
+							className="block h-[50px] w-[100%] min-w-[180px] border-[1px] border-solid border-[rgb(51,51,51)] bg-[#fff] px-[20px] text-center text-[14px] leading-[48px] text-[#000]"
+						>
 							이메일로 가입하기
-						</a>
+						</NavLink>
 					</div>
 				</div>
 			</section>

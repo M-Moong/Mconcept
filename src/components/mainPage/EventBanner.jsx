@@ -8,7 +8,7 @@ const eventList = [event1, event2, event3, event4];
 function EventBanner() {
 	return (
 		<>
-			<section className="my-12 flex">
+			<section className="mb-32 flex">
 				<h2 className="sr-only">EVENT BANNER</h2>
 
 				<a href="#" className="relative h-auto w-auto">

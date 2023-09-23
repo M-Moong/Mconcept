@@ -1,35 +1,40 @@
 import pb from '@/api/pocketbase';
-import { useEffect, useState } from 'react';
-import { Autoplay, Navigation } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import ProductInfo from '../ProductInfo';
+import ProductInfo from '@/components/common/ProductInfo';
+import Spinner from '@/components/common/Spinner';
+import {useQuery} from '@tanstack/react-query';
+import {Autoplay, Navigation} from 'swiper/modules';
+import {Swiper, SwiperSlide} from 'swiper/react';
 
-const style = [
-	'text-left',
-	'ml-1',
-	'ml-2',
-]
+const style = ['text-left', 'ml-1', 'ml-2'];
+
+const getProducts = async () => {
+	return await pb.collection('products').getFullList();
+};
 
 function MakeItYours() {
-	const [data, setData] = useState([]);
+	const {isLoading, data, isError, error} = useQuery({
+		queryKey: ['products'],
+		queryFn: getProducts,
+		retry: 2,
+		refetchOnWindowFocus: false,
+		refetchOnReconnect: false,
+	});
 
-	useEffect(() => {
-		pb.autoCancellation(false);
-		async function getProducts() {
-			try {
-				const readRecordList = await pb.collection('products').getFullList();
-				setData(readRecordList);
-			} catch (error) {
-				console.log(error);
-				throw new Error('error');
-			}
-		}
-		getProducts();
-	}, []);
+	if (isLoading) {
+		return (
+			<div className="grid h-full place-content-center">
+				<Spinner size={160} />
+			</div>
+		);
+	}
+
+	if (isError) {
+		return <div role="alert">{error.toString()}</div>;
+	}
 
 	return (
 		<>
-			<section className="relative mx-auto mb-10">
+			<section className="relative mx-auto mb-32">
 				<h2 className="mb-8 text-center text-[54px] font-thin">MAKE IT YOURS</h2>
 				<div className="flex px-20">
 					<Swiper
@@ -53,12 +58,12 @@ function MakeItYours() {
 								.map((item) => {
 									return (
 										<SwiperSlide key={item.id}>
-											<ProductInfo item={item} style={style}/>
+											<ProductInfo item={item} style={style} />
 										</SwiperSlide>
 									);
 								})
 						) : (
-							<div>ERROR</div>
+							<Spinner />
 						)}
 					</Swiper>
 					<div className="swiper-button-prev" id="preNavi"></div>
@@ -70,7 +75,3 @@ function MakeItYours() {
 }
 
 export default MakeItYours;
-
-
-
-

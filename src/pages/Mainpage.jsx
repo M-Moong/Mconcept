@@ -1,10 +1,11 @@
 import popup1 from '@/assets/images/mainPage/main_popup_1.png';
 import popup2 from '@/assets/images/mainPage/main_popup_2.png';
-import PopUp from '@/components/PopUp';
 import EventBanner from '@/components/mainPage/EventBanner';
 import MainArticle from '@/components/mainPage/MainArticle';
 import MakeItYours from '@/components/mainPage/MakeItYours';
+import PopUp from '@/components/mainPage/PopUp';
 import StyleStory from '@/components/mainPage/StyleStory';
+import {Helmet} from 'react-helmet-async';
 
 const popup = [
 	{
@@ -23,14 +24,19 @@ const popup = [
 
 function Mainpage() {
 	return (
-		<div className="mx-auto max-w-[1920px]">
-			<MainArticle />
-			<StyleStory />
-			<EventBanner />
-			<MakeItYours />
-			<PopUp popup={popup[0]} />
-			<PopUp popup={popup[1]} />
-		</div>
+		<>
+			<Helmet>
+				<title>Home - M Concept</title>
+			</Helmet>
+			<div className="mx-auto max-w-[1920px]">
+				<MainArticle />
+				<StyleStory />
+				<EventBanner />
+				<MakeItYours />
+				<PopUp popup={popup[0]} />
+				<PopUp popup={popup[1]} />
+			</div>
+		</>
 	);
 }
 

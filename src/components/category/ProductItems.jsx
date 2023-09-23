@@ -6,23 +6,9 @@ import ProductInfo from '../ProductInfo';
  *  ProductItems component
  * */
 
-function ProductItems() {
-	const [data, setData] = useState([]);
+const style = ['text-left', 'ml-1', 'ml-2'];
 
-	useEffect(() => {
-		pb.autoCancellation(false);
-		async function getProducts() {
-			try {
-				const readRecordList = await pb.collection('products').getFullList();
-				setData(readRecordList);
-			} catch (error) {
-				console.log(error);
-				throw new Error('error');
-			}
-		}
-		getProducts();
-	}, []);
-
+function ProductItems({data}) {
 	return (
 		<>
 			<div className="products mb-20 grid grid-cols-6 grid-rows-2 gap-6">
@@ -30,7 +16,7 @@ function ProductItems() {
 					data?.map((item) => {
 						return (
 							<div key={item.id}>
-								<ProductInfo item={item} />
+								<ProductInfo item={item} style={style} />
 							</div>
 						);
 					})

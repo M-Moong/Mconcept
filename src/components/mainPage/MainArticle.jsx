@@ -1,6 +1,3 @@
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
 import main1 from '@/assets/images/mainPage/main_banner_1.png';
 import main2 from '@/assets/images/mainPage/main_banner_2.png';
 import main3 from '@/assets/images/mainPage/main_banner_3.png';
@@ -9,9 +6,12 @@ import main5 from '@/assets/images/mainPage/main_banner_5.png';
 import main6 from '@/assets/images/mainPage/main_banner_6.png';
 import '@/styles/swiper.css';
 import {useRef} from 'react';
-import {FaPlay, FaPause} from 'react-icons/fa';
+import {FaPause, FaPlay} from 'react-icons/fa';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import {Autoplay, Navigation, Pagination} from 'swiper/modules';
 import {Swiper, SwiperSlide} from 'swiper/react';
-import {Pagination, Navigation, Autoplay} from 'swiper/modules';
 
 const mainBanner = [main1, main2, main3, main4, main5, main6];
 
@@ -39,7 +39,7 @@ function MainArticle() {
 
 	return (
 		<>
-			<section className="mb-[5rem]">
+			<section className="mb-32">
 				<article className="relative h-full">
 					<Swiper
 						ref={swiperRef}
