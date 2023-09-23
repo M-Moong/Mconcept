@@ -86,8 +86,8 @@
 
 #### Tools
 
-<img src="https://github.com/Rbochill/Rbochill/assets/105577805/12c1ac10-3975-47bc-b271-d8656361d9a2" width="28px"/> <img src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=ESLint&logoColor=white" />
-<img src="https://github.com/Rbochill/Rbochill/assets/105577805/2972553a-b861-4707-a1d1-fbaf8b69f3ca" width="28px"/> <img src="https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=Prettier&logoColor=white" />
+<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/105577805/257670370-12c1ac10-3975-47bc-b271-d8656361d9a2.svg" width="28px"/> <img src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=ESLint&logoColor=white" />
+<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/105577805/257670545-2972553a-b861-4707-a1d1-fbaf8b69f3ca.svg" width="28px"/> <img src="https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=Prettier&logoColor=white" />
 
 
 </br>
