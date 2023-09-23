@@ -78,7 +78,7 @@
 #### Package Manager
 
 <img src="https://github.com/M-Moong/ID-NUMBER/assets/105577805/98668e2c-d97a-45d0-8f75-e14084e75d09" width="28px"/> <img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white" />
-<img src="https://github.com/Rbochill/Rbochill/assets/105577805/0fd7a655-7bbf-4c85-b47e-fecb1ef7ae07" width="28px"/> <img src="https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=JSON&logoColor=white" />
+<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/105577805/257673483-0fd7a655-7bbf-4c85-b47e-fecb1ef7ae07.svg" width="28px"/> <img src="https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=JSON&logoColor=white" />
 
 #### Git
 
