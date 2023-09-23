@@ -36,7 +36,7 @@ function StyleStory() {
 					{storyList.map((item) => {
 						return (
 							<li key={item.title}>
-								<a href="">
+								<a href="#">
 									<figure>
 										<motion.img src={item.img} alt={item.title} whileHover={{scale: 1.05}} whileTap={{scale: 1.02}} drag="x" dragConstraints={{left: -100, right: 100}} />
 										<dl>
