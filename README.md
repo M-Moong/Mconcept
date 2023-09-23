@@ -133,7 +133,7 @@
 | 신승민         | - |
 | 이준석         | - |
 | 이수연         | - |
-| 정지영         | - |
+| 정지영         | ![image](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/131527467/0ece4678-b721-478b-8f3e-1f023b54fe39) |
 
 </br>
 
