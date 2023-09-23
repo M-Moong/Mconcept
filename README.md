@@ -96,7 +96,7 @@
 
 #### Setting
 
-<img src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=ESLint&logoColor=white" /> <img src="https://img.shields.io/badge/Prettier-FFe23EE?style=for-the-badge&logo=Prettier&logoColor=white" />
+<img src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=ESLint&logoColor=white" /> <img src="https://img.shields.io/badge/Prettier-800080?style=for-the-badge&logo=Prettier&logoColor=white" />
 
 
 </br>
