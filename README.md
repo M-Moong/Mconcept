@@ -317,7 +317,9 @@ useEffect(() => {
 
 | 이름           | 성능검사 점수                                                                                                                                                                                                                                                                                        |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 신승민         | - 메인페이지 |
+
+| 신승민         | - 메인페이지 <br/> - 성능최적화 전 ![성능 최적화 전](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/109510367/6075f298-532f-4d38-9eb3-91f734bcffa9) - 성능최적화 후 ![성능 최적화 후](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/109510367/eb4fc103-6d38-4696-87ff-3988490ad6b3)
+ |
 | 이준석         | - 로그인 <br/> <img width="582" alt="image" src="https://github.com/FRONTENDSCHOOL6/Mconcept/assets/73566234/a7d313fa-9611-4a18-9cb9-243c79e77e14"><br/> <br/>  - 회원가입 <br/><img width="573" alt="image" src="https://github.com/FRONTENDSCHOOL6/Mconcept/assets/73566234/61b4a209-23f2-411a-a296-aba8a481d9c8"><br/><br/>  - 회원가입 완료 <br/><img width="581" alt="image" src="https://github.com/FRONTENDSCHOOL6/Mconcept/assets/73566234/77d05c86-fddd-4059-b302-dc59b4a5ae7e"><br/><br/>- 헤더 <br/><img width="583" alt="image" src="https://github.com/FRONTENDSCHOOL6/Mconcept/assets/73566234/8b655fba-14b8-45c2-b459-1a36ff8aa5d0"><br/>|
 | 이수연         | - 상세페이지 |
 | 정지영         | - 카테고리 페이지 </br> ![image](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/131527467/53e6c8e4-b751-4fc6-b789-5157f6290293) |
