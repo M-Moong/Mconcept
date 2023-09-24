@@ -114,32 +114,32 @@
 </br>
 
 # 6. 🖥️ 파일 디렉토리
-📦src
- ┣ 📂api
- ┣ 📂assets
- ┃ ┣ 📂images
- ┃ ┃ ┣ 📂detail
- ┃ ┃ ┣ 📂header
- ┃ ┃ ┣ 📂joinComplete
- ┃ ┃ ┣ 📂login
- ┃ ┃ ┗ 📂mainPage
- ┣ 📂components
- ┃ ┣ 📂category
- ┃ ┣ 📂common
- ┃ ┣ 📂detail
- ┃ ┣ 📂header
- ┃ ┣ 📂join
- ┃ ┣ 📂login
- ┃ ┗ 📂mainPage
- ┣ 📂contexts
- ┣ 📂hooks
- ┣ 📂layout
- ┣ 📂pages
- ┣ 📂routes
- ┣ 📂styles
- ┣ 📂utils
- ┣ 📜App.jsx
- ┗ 📜main.jsx
+📦src<br/>
+ ┣ 📂api<br/>
+ ┣ 📂assets<br/>
+ ┃ ┣ 📂images<br/>
+ ┃ ┃ ┣ 📂detail<br/>
+ ┃ ┃ ┣ 📂header<br/>
+ ┃ ┃ ┣ 📂joinComplete<br/>
+ ┃ ┃ ┣ 📂login<br/>
+ ┃ ┃ ┗ 📂mainPage<br/>
+ ┣ 📂components<br/>
+ ┃ ┣ 📂category<br/>
+ ┃ ┣ 📂common<br/>
+ ┃ ┣ 📂detail<br/>
+ ┃ ┣ 📂header<br/>
+ ┃ ┣ 📂join<br/>
+ ┃ ┣ 📂login<br/>
+ ┃ ┗ 📂mainPage<br/>
+ ┣ 📂contexts<br/>
+ ┣ 📂hooks<br/>
+ ┣ 📂layout<br/>
+ ┣ 📂pages<br/>
+ ┣ 📂routes<br/>
+ ┣ 📂styles<br/>
+ ┣ 📂utils<br/>
+ ┣ 📜App.jsx<br/>
+ ┗ 📜main.jsx<br/>
 <br/>
 
 # 6. 🖥️ 코드리뷰 with 구현 페이지(고정형)
