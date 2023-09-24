@@ -713,8 +713,10 @@ const handleSignIn = async (e) => {
 ## 🎥 코드리뷰 | 상세 페이지 | 이수연
 - 간단한 설명 및 gif 첨부
 ### 💡 기능설명 | 1. 상세 페이지 pocket base와 연결
-- 메인 페이지의 이벤트 배너를 스와이퍼 슬라이드로 구현 하였습니다.(접근성을 위해 일시정지와 재생버튼도 추가하였습니다.)
-![메인페이지_Swiper js](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/109510367/a4b3e8a4-818f-467d-b518-0a21cc804ccb)
+- 상세 페이지 pocket base와 연결하였습니다.
+<img width="1792" alt="2023-09-25_2 53 34" src="https://github.com/FRONTENDSCHOOL6/Mconcept/assets/134567438/786918b7-ff2d-4f70-a424-d9e9a2448df1">
+
+
 
 ```jsx
  
