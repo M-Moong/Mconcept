@@ -237,7 +237,9 @@ function MakeItYours() {
 
 ### 💡 기능설명 | 3. 최근 본 상품 팝업
 - 로컬스토리지에 상품 아이디를 담아 최근 본 상품 페이지를 구현하였습니다.
+  
 ![메인페이지_로컬스토리지 활용](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/109510367/67bac59d-d3fa-4aa2-83b3-7eb284a21770)
+
 ```
 useEffect(() => {
 	// 현재 로컬 스토리지에 저장된 데이터 가져오기
