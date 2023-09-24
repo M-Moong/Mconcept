@@ -22,7 +22,7 @@
 - 프로젝트 목적 : **쇼핑몰 기능 구현**
 - 프로젝트 기간 : **230904 ~ 230924**
 - 배포 주소 : [[바로가기]](https://mconcept.vercel.app/)
-- PPT 발표자료 : [[바로가기]](https://www.canva.com/design/DAFvIb2LPRE/GWgc-AnytevkEtJyvu0S3Q/edit)
+- PPT 발표자료 : [[바로가기]](https://www.canva.com/design/DAFvIb2LPRE/GWgc-AnytevkEtJyvu0S3Q/view)
 </br> </br>
 
 ![image](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/131527467/f0aaa4a2-e6f0-4a76-9837-3d8f2caa7ab5)
