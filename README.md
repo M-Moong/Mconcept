@@ -434,6 +434,7 @@ export default ProductCategoryItem;
 ### 💡 기능설명 | 3. 상품 아이템 컴포넌트
 - 공통 컴포넌트를 활용하여 UI의 통일성을 높이고, 효율적으로 재사용 가능한 컴포넌트를 만들었습니다.
 - 데이터 정보를 받아 하단 라벨을 조건부 렌더링을 통해 구현했습니다.
+<img width="1190" alt="image" src="https://github.com/FRONTENDSCHOOL6/Mconcept/assets/131527467/9fcf7e03-9bf9-46b3-a3e0-6961b54272ac">
 
 ```js
 function ProductInfo({item, style = ''}) {
