@@ -362,40 +362,10 @@ useEffect(() => {
   ```
 ### 💡 기능설명 | 2. 카테고리 분류
 - 카테고리 메뉴를 리스트 렌더링 하여 컴포넌트화 하고, 버튼 클릭시 메뉴를 열고 닫는 드롭다운 기능을 구현했습니다.<br/>
-해당 메뉴 클릭시 카테고리와 일치하는 상품 정보의 데이터를 불러옵니다.
+- 해당 메뉴 클릭시 카테고리와 일치하는 상품 정보의 데이터를 불러옵니다.
 ```
 // 카테고리 및 아이템 데이터
-const categories = [
-	{
-		id: '1',
-		title: '아우터',
-		entit: 'outer',
-		items: ['자켓', '점퍼', '패딩', '코트'],
-		eitems: ['jacket', 'jumper', 'padding', 'coat'],
-	},
-	{
-		id: '2',
-		title: '팬츠',
-		entit: 'pants',
-		items: ['슬랙스', '쇼츠', '치노', '조거'],
-		eitems: ['slacks', 'shorts', 'chinos', 'jogger'],
-	},
-	{
-		id: '3',
-		title: '티셔츠',
-		entit: 'tshirts',
-		items: ['슬리브', '스웻', '후드', '롱슬리브'],
-		eitems: ['sleeves', 'sweats', 'Hood', 'longsleeves'],
-	},
-	{
-		id: '4',
-		title: '니트',
-		entit: 'neat',
-		items: ['풀오버', '가디건', '베스트', '터틀넥'],
-		eitems: ['pullover', 'cardigan', 'best', 'turtleneck'],
-	},
-];
-
+const categories = [...]
 function ProductCategoryItem() {
 	const [activeItem, setActiveItem] = useState(null);
 	const [isItemsVisible, setIsItemsVisible] = useState({0: true});
@@ -459,7 +429,6 @@ export default ProductCategoryItem;
 ```
 ### 💡 기능설명 | 3. 컴포넌트
 - 공통 컴포넌트를 활용하여 UI의 통일성을 높이고, 효율적으로 재사용 가능한 컴포넌트를 만들었습니다.
--
 ```
 function ProductInfo({item, style = ''}) {
 	return (
