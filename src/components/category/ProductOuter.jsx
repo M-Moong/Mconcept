@@ -14,7 +14,7 @@ function ProductOuter({data}) {
 			<div className="products mb-20 grid grid-cols-6 grid-rows-2 gap-6">
 				{data ? (
 					data
-						?.filter((item) => item.category === '아우터')
+					?.filter((item) => ['아우터','자켓', '점퍼', '패딩', '코트'].includes(item.category))
 						.map((item) => {
 							return <ProductInfo item={item} style={style} />;
 						})

@@ -1,6 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import '../../styles/category.css';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
+import {motion} from 'framer-motion';
 
 // 카테고리 및 아이템 데이터
 const categories = [
@@ -9,14 +10,14 @@ const categories = [
 		title: '아우터',
 		entit: 'outer',
 		items: ['자켓', '점퍼', '패딩', '코트'],
-		eitems: ['jacket', 'jumper', 'padding', 'coat']
+		eitems: ['jacket', 'jumper', 'padding', 'coat'],
 	},
 	{
 		id: '2',
 		title: '팬츠',
 		entit: 'pants',
 		items: ['슬랙스', '쇼츠', '치노', '조거'],
-		eitems: ['slacks', 'shorts', 'chinos', 'jogger']
+		eitems: ['slacks', 'shorts', 'chinos', 'jogger'],
 	},
 	{
 		id: '3',
@@ -35,7 +36,20 @@ const categories = [
 ];
 
 function ProductCategoryItem() {
-	const [activeItem, setActiveItem] = useState(null);
+    const [activeItem, setActiveItem] = useState(null);
+    const [isItemsVisible, setIsItemsVisible] = useState({0: true});
+    const [buttonStyles, setButtonStyles] = useState({0: '-30px'});
+
+	const handleButtonClick = (index) => {
+		setIsItemsVisible((prevState) => ({
+			...prevState,
+			[index]: !prevState[index],
+		}));
+		setButtonStyles((prevState) => ({
+			...prevState,
+			[index]: prevState[index] ? '0' : '-30px',
+		}));
+	};
 
 	return (
 		<>
@@ -49,22 +63,24 @@ function ProductCategoryItem() {
 							className="float-right mr-2 mt-3 block h-[9px] w-[9px]"
 							style={{
 								backgroundImage: `url("../../public/common/sprīt.png")`,
-								backgroundPositionX: '0',
+								backgroundPositionX: buttonStyles[index] || '0',
 								backgroundPositionY: '-60px',
 								backgroundRepeat: 'no-repeat',
 							}}
+							onClick={() => handleButtonClick(index)}
 						></button>
 						{/* 카테고리 제목에 링크를 추가합니다 */}
-						<Link to={`${category.entit}`} onClick={() => setActiveItem(category.title)} className={activeItem === category.title ? 'item-active' : ''}>
+						<Link to={`/categoryBrand/${category.entit}`} onClick={() => setActiveItem(category.title)}>
 							<dl key={`${index}-title`}>
 								<dt className="sr-only" aria-label="제목"></dt>
-								<dd>{category.title}</dd>
+								<dd className={`item ${activeItem === category.title ? 'item-active' : ''}`}>{category.title}</dd>
 							</dl>
 						</Link>
 					</a>
 
+					{/* 카테고리 부제목에 링크를 추가합니다 */}
 					{category.items.map((item, id) => (
-						<Link to={`${category.eitems && category.eitems[id]}`} key={`${index}-${id}`} onClick={() => setActiveItem(item)} className={activeItem === item ? 'item-active' : ''}>
+						<Link to={`/categoryBrand/${category.eitems && category.eitems[id]}`} key={`${index}-${id}`} onClick={() => setActiveItem(item)}>
 							<dl>
 								<dt className="sr-only" aria-label="부제목"></dt>
 								<dd className='ml-2 hover:scale-110'>{item}</dd>

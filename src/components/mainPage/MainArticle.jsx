@@ -82,13 +82,15 @@ function MainArticle() {
 						{/* 이전, 다음 버튼 */}
 						<div className="swiper-button-prev" id="pnavi"></div>
 						<div className="swiper-button-next" id="nnavi"></div>
-						{/* 일시정지, 재생 버튼 */}
+						{/* 일시정지 버튼 */}
 						<button onClick={handlePause} className="swiperPause" aria-label="일시정지">
 							<FaPause className="faPause" />
 						</button>
+						{/* 재생 버튼  */}
 						<button onClick={handlePlay} className="swiperPlay" aria-label="재생">
 							<FaPlay className="faPlay" />
 						</button>
+						{/* 타이머 */}
 						<div className="autoplay-progress" slot="container-end">
 							<svg viewBox="0 0 48 48" ref={progressCircle}>
 								<circle cx="24" cy="24" r="20"></circle>

@@ -1,15 +1,10 @@
 import pb from '@/api/pocketbase';
 import ProductCategory from '@/components/category/ProductCategory';
 import ProductFilterList from '@/components/category/ProductFilterBrandList';
-import ProductsItems from '@/components/category/ProductItems';
 import ProductNav from '@/components/category/ProductNav';
 import ProductOuter from '@/components/category/ProductOuter';
-import ProductPageNation from '@/components/category/ProductPageNation';
-import ProductSort from '@/components/category/ProductSort';
-import ProductInfo from '@/components/common/ProductInfo';
-import {useEffect, useRef, useState} from 'react';
-import {Helmet} from 'react-helmet-async';
-import {NavLink} from 'react-router-dom';
+import { useEffect, useRef, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 /**
  *  Category Page

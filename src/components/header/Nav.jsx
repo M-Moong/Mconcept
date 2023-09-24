@@ -97,7 +97,12 @@ function Nav() {
 					>
 						CATEGORY
 					</a>
-					<div className={`${catagoryIsVisible ? '' : 'hidden'} second_nav absolute left-[0] right-[0] top-[47px] z-[99px] cursor-default border-t-[1px] border-solid border-[#e9e9e9] bg-[#fff]`}>
+					<div
+						className={`${
+							catagoryIsVisible ? '' : 'hidden'
+						} second_nav absolute left-[0] right-[0] top-[47px] z-[99px] cursor-default border-t-[1px] border-solid border-[#e9e9e9] bg-[#fff]  shadow-[0_10px_28px_0px_rgba(0,0,0,0.12)]`}
+						// shadow-[0_16px_22px_0_rgb(0,0,0/12%)]
+					>
 						<div className="second_nav_cont after:content[''] relative mx-[auto] my-[0] min-h-[324px] w-[100%] max-w-[1920px] pb-[30px] pl-[20px] pr-[0] pt-[16px] text-left before:absolute before:left-[21px] before:top-[-2.5px] before:block before:h-[5px] before:w-[174px] before:bg-[#fff] before:content-[''] after:invisible after:clear-both after:block after:h-[0]">
 							<div className="category_wrap relative float-left pt-[14px]">
 								<div className="category_men flex w-[1232px] flex-wrap content-start pl-[170px]">

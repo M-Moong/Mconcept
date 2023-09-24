@@ -1,5 +1,3 @@
-import pb from '@/api/pocketbase';
-import {useEffect, useState} from 'react';
 import ProductInfo from '@/components/common/ProductInfo';
 
 

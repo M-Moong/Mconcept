@@ -9,7 +9,7 @@ function ProductInfo({item, style = ''}) {
 		<>
 			<Link to={`/products/${item.id}`}>
 				<motion.div className="img" whileHover={{opacity: 0.8}}>
-					<img src={getProductsImage(item, 'photo')} alt={item.name} key={item.id} />
+					<img src={getProductsImage(item, 'photo')} alt={item.name} key={item.id} className='w-full h-full'/>
 				</motion.div>
 
 				<div className="relative">

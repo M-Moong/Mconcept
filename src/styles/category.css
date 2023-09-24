@@ -1,6 +1,6 @@
-  
-  .item:hover, .item-active {
-    color: #ff0000; /* 적용하려는 색상으로 변경 */
-    /* text-decoration: underline; */
-  }
-  
+.item:hover,
+.item-active,
+.item-visited {
+	color: #fa5500; /* 적용하려는 색상으로 변경 */
+	text-decoration: underline;
+}

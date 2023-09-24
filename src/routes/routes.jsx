@@ -14,6 +14,7 @@ const CategoryTshirts = lazy(() => import('@/pages/CategoryTshirts'));
 const CategoryNeat = lazy(() => import('@/pages/CategoryNeat'));
 const Details = lazy(() => import('@/pages/Details'));
 const Join = lazy(() => import('@/pages/Join'));
+const JoinComplete = lazy(() => import('@/pages/JoinComplete'));
 const Login = lazy(() => import('@/pages/Login'));
 
 const router = createBrowserRouter(
@@ -21,16 +22,16 @@ const router = createBrowserRouter(
 		<Route path="/" element={<RootLayout />}>
 			<Route index element={<Mainpage />} />
 			<Route path="join" element={<Join />} />
+			<Route path="join/joinComplete" element={<JoinComplete />} />
 			<Route path="login" element={<Login />} />
 			<Route path="products/:id" element={<Details />} />
 			<Route path="categoryBrand" element={<CategoryBrand />} />
-			<Route path="categoryColor" element={<CategoryColor />} />
 			<Route path="categoryBrand/outer" element={<CategoryOuter />} />
 			<Route path="jacket" element={<CategoryJacket />} />
 			<Route path="jumper" element={<CategoryJumper />} />
 			<Route path="padding" element={<CategoryPadding />} />
 			<Route path="coat" element={<CategoryCoat />} />
-			<Route path="pants" element={<CategoryPants/>} />
+			<Route path="pants" element={<CategoryPants />} />
 			<Route path="tshirts" element={<CategoryTshirts />} />
 			<Route path="neat" element={<CategoryNeat />} />
 		</Route>,

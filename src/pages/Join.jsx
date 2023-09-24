@@ -159,7 +159,7 @@ function Join() {
 			emailVisibility: true,
 		});
 
-		navigate('/');
+		navigate('joinComplete');
 	};
 
 	const handleInput = (e) => {
@@ -239,7 +239,7 @@ function Join() {
 								<tr>
 									<th className="sr-only hidden">배너 th</th>
 									<td colSpan="2" className="p-[0]">
-										<div className="table h-[48px] w-[100%] bg-[#ff6160] text-center text-[#fff]">
+										<div className="table h-[48px] w-[100%] bg-[#B30300] text-center text-[#fff]">
 											<strong className="table-cell align-middle text-[20px]">
 												회원으로 가입하시면 즉시 사용가능한
 												<span>10%</span>

@@ -4,127 +4,164 @@ import cate_globalshop from '../../../public//header/cate_globalshop.jpeg';
 import cate_luxuryzone from '../../../public//header/cate_luxuryzone.jpeg';
 import cate_manneiProductPic from '../../../public//header/cate_manneiProductPic.jpeg';
 import {Fragment} from 'react';
+import {NavLink} from 'react-router-dom';
+
+const catagoryList = [
+	{
+		id: crypto.randomUUID(),
+		categoryTitle: '아우터',
+		categoryItem: [
+			{
+				itemTitle: '자켓',
+				id: crypto.randomUUID(),
+				link: 'login',
+			},
+			{
+				itemTitle: '점퍼',
+				id: crypto.randomUUID(),
+				link: 'login',
+			},
+			{
+				itemTitle: '패딩',
+				id: crypto.randomUUID(),
+				link: 'login',
+			},
+			{
+				itemTitle: '코트',
+				id: crypto.randomUUID(),
+				link: 'login',
+			},
+		],
+	},
+	{
+		id: crypto.randomUUID(),
+		categoryTitle: '팬츠',
+		categoryItem: [
+			{
+				itemTitle: '슬랙스',
+				id: crypto.randomUUID(),
+				link: 'login',
+			},
+			{
+				itemTitle: '쇼츠',
+				id: crypto.randomUUID(),
+				link: 'login',
+			},
+			{
+				itemTitle: '치노',
+				id: crypto.randomUUID(),
+				link: 'login',
+			},
+			{
+				itemTitle: '스웻',
+				id: crypto.randomUUID(),
+				link: 'login',
+			},
+			{
+				itemTitle: '조거',
+				id: crypto.randomUUID(),
+				link: 'login',
+			},
+			{
+				itemTitle: '카고',
+				id: crypto.randomUUID(),
+				link: 'login',
+			},
+			{
+				itemTitle: '레깅스',
+				id: crypto.randomUUID(),
+				link: 'login',
+			},
+		],
+	},
+	{
+		id: crypto.randomUUID(),
+		categoryTitle: '티셔츠',
+		categoryItem: [
+			{
+				itemTitle: '반팔',
+				id: crypto.randomUUID(),
+				link: 'login',
+			},
+			{
+				itemTitle: '스웻',
+				id: crypto.randomUUID(),
+				link: 'login',
+			},
+			{
+				itemTitle: '후드',
+				id: crypto.randomUUID(),
+				link: 'login',
+			},
+			{
+				itemTitle: '긴팔',
+				id: crypto.randomUUID(),
+				link: 'login',
+			},
+			{
+				itemTitle: '카라',
+				id: crypto.randomUUID(),
+				link: 'login',
+			},
+			{
+				itemTitle: '슬리브리스',
+				id: crypto.randomUUID(),
+				link: 'login',
+			},
+			{
+				itemTitle: '터틀넥',
+				id: crypto.randomUUID(),
+				link: 'login',
+			},
+		],
+	},
+	{
+		id: crypto.randomUUID(),
+		categoryTitle: '니트',
+		categoryItem: [
+			{
+				itemTitle: '풀오버',
+				id: crypto.randomUUID(),
+				link: 'login',
+			},
+			{
+				itemTitle: '가디건',
+				id: crypto.randomUUID(),
+				link: 'login',
+			},
+			{
+				itemTitle: '베스트',
+				id: crypto.randomUUID(),
+				link: 'login',
+			},
+			{
+				itemTitle: '베스트',
+				id: crypto.randomUUID(),
+				link: 'login',
+			},
+		],
+	},
+];
 
 function CategoryMen() {
 	return (
 		<>
-			<ul className="block w-[177px] pl-[30px] pr-[20px]">
-				<li className="depth2 mb-[12px] text-[14px]">아우터</li>
-				<li>
-					<a href="#" className="overflow-hidden text-ellipsis text-[13px] uppercase leading-[16px] text-[#7b7b7b]">
-						자켓
-					</a>
-				</li>
-				<li>
-					<a href="#" className="overflow-hidden text-ellipsis text-[13px] uppercase leading-[16px] text-[#7b7b7b]">
-						점퍼
-					</a>
-				</li>
-				<li>
-					<a href="#" className="overflow-hidden text-ellipsis text-[13px] uppercase leading-[16px] text-[#7b7b7b]">
-						패딩
-					</a>
-				</li>
-				<li>
-					<a href="#" className="overflow-hidden text-ellipsis text-[13px] uppercase leading-[16px] text-[#7b7b7b]">
-						코트
-					</a>
-				</li>
-			</ul>
-			<ul className="block w-[177px] pl-[30px] pr-[20px]">
-				<li className="depth2 mb-[12px] text-[14px]">팬츠</li>
-				<li>
-					<a href="#" className="overflow-hidden text-ellipsis text-[13px] uppercase leading-[16px] text-[#7b7b7b]">
-						슬랙스
-					</a>
-				</li>
-				<li>
-					<a href="#" className="overflow-hidden text-ellipsis text-[13px] uppercase leading-[16px] text-[#7b7b7b]">
-						쇼츠
-					</a>
-				</li>
-				<li>
-					<a href="#" className="overflow-hidden text-ellipsis text-[13px] uppercase leading-[16px] text-[#7b7b7b]">
-						치노
-					</a>
-				</li>
-				<li>
-					<a href="#" className="overflow-hidden text-ellipsis text-[13px] uppercase leading-[16px] text-[#7b7b7b]">
-						스웻
-					</a>
-				</li>
-				<li>
-					<a href="#" className="overflow-hidden text-ellipsis text-[13px] uppercase leading-[16px] text-[#7b7b7b]">
-						조거
-					</a>
-				</li>
-				<li>
-					<a href="#" className="overflow-hidden text-ellipsis text-[13px] uppercase leading-[16px] text-[#7b7b7b]">
-						카고
-					</a>
-				</li>
-				<li>
-					<a href="#" className="overflow-hidden text-ellipsis text-[13px] uppercase leading-[16px] text-[#7b7b7b]">
-						레깅스
-					</a>
-				</li>
-			</ul>
-			<ul className="block w-[177px] pl-[30px] pr-[20px]">
-				<li className="depth2 mb-[12px] text-[14px]">티셔츠</li>
-				<li>
-					<a href="#" className="overflow-hidden text-ellipsis text-[13px] uppercase leading-[16px] text-[#7b7b7b]">
-						반팔
-					</a>
-				</li>
-				<li>
-					<a href="#" className="overflow-hidden text-ellipsis text-[13px] uppercase leading-[16px] text-[#7b7b7b]">
-						스웻
-					</a>
-				</li>
-				<li>
-					<a href="#" className="overflow-hidden text-ellipsis text-[13px] uppercase leading-[16px] text-[#7b7b7b]">
-						후드
-					</a>
-				</li>
-				<li>
-					<a href="#" className="overflow-hidden text-ellipsis text-[13px] uppercase leading-[16px] text-[#7b7b7b]">
-						긴팔
-					</a>
-				</li>
-				<li>
-					<a href="#" className="overflow-hidden text-ellipsis text-[13px] uppercase leading-[16px] text-[#7b7b7b]">
-						카라
-					</a>
-				</li>
-				<li>
-					<a href="#" className="overflow-hidden text-ellipsis text-[13px] uppercase leading-[16px] text-[#7b7b7b]">
-						슬리브리스
-					</a>
-				</li>
-				<li>
-					<a href="#" className="overflow-hidden text-ellipsis text-[13px] uppercase leading-[16px] text-[#7b7b7b]">
-						터틀넷
-					</a>
-				</li>
-			</ul>
-			<ul className="block w-[177px] pl-[30px] pr-[20px]">
-				<li className="depth2 mb-[12px] text-[14px]">언더웨어</li>
-				<li>
-					<a href="#" className="overflow-hidden text-ellipsis text-[13px] uppercase leading-[16px] text-[#7b7b7b]">
-						팬티
-					</a>
-				</li>
-				<li>
-					<a href="#" className="overflow-hidden text-ellipsis text-[13px] uppercase leading-[16px] text-[#7b7b7b]">
-						드로즈
-					</a>
-				</li>
-				<li>
-					<a href="#" className="overflow-hidden text-ellipsis text-[13px] uppercase leading-[16px] text-[#7b7b7b]">
-						트렁크
-					</a>
-				</li>
-			</ul>
+			{catagoryList.map((item) => (
+				<ul key={item.id} className="block w-[177px] pl-[30px] pr-[20px]">
+					<li className="depth2 mb-[12px] ">
+						<a href="#" className="text-[14px] hover:underline hover:underline-offset-2">
+							{item.categoryTitle}
+						</a>
+					</li>
+					{item.categoryItem.map((item) => (
+						<li key={item.id}>
+							<NavLink to={item.link} className="overflow-hidden text-ellipsis text-[13px] uppercase leading-[16px] text-[#7b7b7b] hover:text-[#000]">
+								{item.itemTitle}
+							</NavLink>
+						</li>
+					))}
+				</ul>
+			))}
 			<ul className="block w-[177px] pl-[30px] pr-[20px]"></ul>
 			<ul className="block w-[177px] pl-[30px] pr-[20px]"></ul>
 			<ul className="cate_banner mt-[50px] flex pl-[30px]">
