@@ -36,9 +36,9 @@ const categories = [
 ];
 
 function ProductCategoryItem() {
-    const [activeItem, setActiveItem] = useState(null);
-    const [isItemsVisible, setIsItemsVisible] = useState({0: true});
-    const [buttonStyles, setButtonStyles] = useState({0: '-30px'});
+	const [activeItem, setActiveItem] = useState(null);
+	const [isItemsVisible, setIsItemsVisible] = useState({0: true});
+	const [buttonStyles, setButtonStyles] = useState({0: '-30px'});
 
 	const handleButtonClick = (index) => {
 		setIsItemsVisible((prevState) => ({
@@ -83,7 +83,7 @@ function ProductCategoryItem() {
 						<Link to={`/categoryBrand/${category.eitems && category.eitems[id]}`} key={`${index}-${id}`} onClick={() => setActiveItem(item)}>
 							<dl>
 								<dt className="sr-only" aria-label="부제목"></dt>
-								<dd className='ml-2 hover:scale-110'>{item}</dd>
+								<dd className="ml-2 hover:scale-110">{item}</dd>
 							</dl>
 						</Link>
 					))}

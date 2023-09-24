@@ -1,3 +1,11 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+.sprite01 {
+	@apply bg-sprite01;
+}
+
+.icon_search {
+	@apply bg-icon_search;
+}
