@@ -126,7 +126,7 @@
 - ```code```
 
 ## 🎥 코드리뷰 | 카테고리 페이지 | 정지영
-- ![ezgif com-optimize](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/131527467/99fd38cc-446c-4db2-99db-e4307b224197)
+![ezgif com-optimize](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/131527467/99fd38cc-446c-4db2-99db-e4307b224197)
 
 ### 💡 기능설명 | 1. 카테고리 필터
 - 간단한 설명
