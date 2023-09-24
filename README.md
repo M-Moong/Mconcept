@@ -123,7 +123,7 @@
 - 메인 페이지의 이벤트 배너를 스와이퍼 슬라이드로 구현 하였습니다.(접근성을 위해 일시정지와 재생버튼도 추가하였습니다.)
 ![메인페이지_Swiper js](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/109510367/a4b3e8a4-818f-467d-b518-0a21cc804ccb)
 
-```react
+```js
   <Swiper
 	ref={swiperRef}	slidesPerView={1} spaceBetween={30} loop={true}	pagination={{
 		clickable: true,
