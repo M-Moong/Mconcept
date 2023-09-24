@@ -427,7 +427,7 @@ function ProductCategoryItem() {
 
 export default ProductCategoryItem;
 ```
-### 💡 기능설명 | 3. 컴포넌트
+### 💡 기능설명 | 3. 상품 아이템 컴포넌트
 - 공통 컴포넌트를 활용하여 UI의 통일성을 높이고, 효율적으로 재사용 가능한 컴포넌트를 만들었습니다.
 ```js
 function ProductInfo({item, style = ''}) {
