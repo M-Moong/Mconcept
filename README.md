@@ -125,49 +125,61 @@
 
 ```js
   <Swiper
-	ref={swiperRef}	slidesPerView={1} spaceBetween={30} loop={true}	pagination={{
-		clickable: true,
-	}}
-	autoplay={{
-		delay: 2000,
-		disableOnInteraction: false,
-	}}
-	centeredSlides={true}
-	navigation={{
-		nextEl: '#nnavi',
-		prevEl: '#pnavi',
-	}}
-	modules={[Autoplay, Pagination, Navigation]}
-	onAutoplayTimeLeft={onAutoplayTimeLeft}
-	className="mySwiper">
-	{mainBanner.map((item) => {
-		return (
-		<SwiperSlide key={item}>
-			<a href="#">
-				<img src={item} alt="" className='w-full h-full'/>
-			</a>
-		</SwiperSlide>
-		);
-	})}
-	{/* 이전, 다음 버튼 */}
-	<div className="swiper-button-prev" id="pnavi"></div>
-	<div className="swiper-button-next" id="nnavi"></div>
-	{/* 일시정지 버튼 */}
-	<button onClick={handlePause} className="swiperPause" aria-label="일시정지">
-		<FaPause className="faPause" />
-	</button>
-	{/* 재생 버튼  */}
-	<button onClick={handlePlay} className="swiperPlay" aria-label="재생">
-		<FaPlay className="faPlay" />
-	</button>
-	{/* 타이머 */}
-	<div className="autoplay-progress" slot="container-end">
-		<svg viewBox="0 0 48 48" ref={progressCircle}>
-			<circle cx="24" cy="24" r="20"></circle>
-		</svg>
-		<span ref={progressContent}></span>
-	</div>
-	</Swiper>
+  ref={swiperRef}
+  slidesPerView={1}
+  spaceBetween={30}
+  loop={true}
+  pagination={{
+    clickable: true,
+  }}
+  autoplay={{
+    delay: 2000,
+    disableOnInteraction: false,
+  }}
+  centeredSlides={true}
+  navigation={{
+    nextEl: '#nnavi',
+    prevEl: '#pnavi',
+   }}
+   modules={[Autoplay, Pagination, Navigation]}
+   onAutoplayTimeLeft={onAutoplayTimeLeft}
+   className="mySwiper"
+>
+ {mainBanner.map((item) => {
+   return (
+     <SwiperSlide key={item}>
+       <a href="#">
+         <img src={item} alt="" className='w-full h-full'/>
+       </a>
+     </SwiperSlide>
+   );
+ })}
+
+ {/* 이전, 다음 버튼 */}
+ <div className="swiper-button-prev" id="pnavi"></div>
+ <div className="swiper-button-next" id="nnavi"></div>
+
+ {/* 일시정지 버튼 */}
+ <button onClick={handlePause} className="swiperPause" aria-label="일시정지">
+   <FaPause className="faPause" />
+ </button>
+
+ {/* 재생 버튼 */}
+ <button onClick={handlePlay} className="swiperPlay" aria-label="재생">
+   <FaPlay className="faPlay" />
+ </button>
+
+ {/* 타이머 */}
+ <div className="autoplay-progress" slot="container-end">
+   <svg viewBox="0 0 48 48" ref={progressCircle}>
+     <circle cx="24" cy ="24" r ="20"></circle>
+   </svg>
+   
+   <span ref ={progressContent}></span>
+ </div>
+
+</Swiper> 
+
 ```
 
 
@@ -176,64 +188,62 @@
 ![메인페이지_리스트 렌더링](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/109510367/fa227626-5909-43b5-8a46-a4668870ea48)
 ```js
 const getProducts = async () => {
-	return await pb.collection('products').getFullList();
+  return await pb.collection('products').getFullList();
 };
+
 function MakeItYours() {
-	const {isLoading, data, isError, error} = useQuery({
-		queryKey: ['products'],
-		queryFn: getProducts,
-		retry: 2,
-		refetchOnWindowFocus: false,
-		refetchOnReconnect: false,
-	});
+  const { isLoading, data, isError, error } = useQuery({
+    queryKey: ['products'],
+    queryFn: getProducts,
+    retry: 2,
+    refetchOnWindowFocus: false,
+    refetchOnReconnect: false,
+  });
 
-	if (isError) {
-		return <div role="alert">{error.toString()}</div>;
-	}
+  if (isError) {
+    return <div role="alert">{error.toString()}</div>;
+  }
 
-	return (
-		<>
-		<section className="relative mx-auto mb-32">
-			<h2 className="mb-8 text-center text-[54px] font-thin">MAKE IT YOURS</h2>
-			{isLoading ? (
-				<div className="grid h-full place-content-center">
-					<Spinner size={160} />
-				</div>
-			) : (
-				<div className="flex px-20">
-					<Swiper
-						slidesPerView={6}
-						spaceBetween={20}
-						loop={true}
-						navigation={{
-							nextEl: '#nextNavi',
-							prevEl: '#preNavi',
-						}}
-						autoplay={{
-							delay: 2000,
-							disableOnInteraction: false,
-						}}
-						modules={[Navigation, Autoplay]}
-						className="mySwiper"
-					>
-						{data
-							?.filter((item) => item.main == true)
-							.map((item) => {
-								return (
-									<SwiperSlide key={item.id}>
-										<ProductInfo item={item} style={style} />
-									</SwiperSlide>
-								);
-							})}
-					</Swiper>
-					<div className="swiper-button-prev" id="preNavi"></div>
-					<div className="swiper-button-next" id="nextNavi"></div>
-				</div>
-			)}
-		</section>
-		</>
-	);
+  return (
+    <>
+      <section className="relative mx-auto mb-32">
+        <h2 className="mb-8 text-center text-[54px] font-thin">MAKE IT YOURS</h2>
+        {isLoading ? (
+          <div className="grid h-full place-content-center">
+            <Spinner size={160} />
+          </div>
+        ) : (
+          <div className="flex px-20">
+            <Swiper
+              slidesPerView={6}
+              spaceBetween={20}
+              loop={true}
+              navigation={{
+                nextEl: '#nextNavi',
+                prevEl: '#preNavi',
+              }}
+              autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+              }}
+              modules={[Navigation, Autoplay]}
+              className="mySwiper"
+            >
+             {data?.filter((item) => item.main == true).map((item) => (
+               <SwiperSlide key={item.id}>
+                 <ProductInfo item={item} style={style} />
+               </SwiperSlide>
+             ))}
+            </Swiper>
+            <div className="swiper-button-prev" id="preNavi"></div>
+            <div className="swiper-button-next" id="nextNavi"></div>
+          </div>
+        )}
+      </section>
+    </>
+   );
 }
+
 ```
 
 ### 💡 기능설명 | 3. 최근 본 상품 팝업
@@ -243,59 +253,61 @@ function MakeItYours() {
 
 ```js
 useEffect(() => {
-	// 현재 로컬 스토리지에 저장된 데이터 가져오기
-	let currentHistory = JSON.parse(localStorage.getItem('recentlyViewed')) || [];
+  // 현재 로컬 스토리지에 저장된 데이터 가져오기
+  let currentHistory = JSON.parse(localStorage.getItem('recentlyViewed')) || [];
 
-	// 새로운 아이템이 이미 리스트에 있는지 확인하고 있다면 삭제
-	if (currentHistory.find((item) => item === id)) {
-		currentHistory = currentHistory.filter((item) => item !== id);
-	}
+  // 새로운 아이템이 이미 리스트에 있는지 확인하고 있다면 삭제
+  if (currentHistory.find((item) => item === id)) {
+    currentHistory = currentHistory.filter((item) => item !== id);
+  }
 
-	// 현재 보고 있는 아이템을 최근 본 목록의 가장 앞으로 추가
-	currentHistory.unshift(id);
+  // 현재 보고 있는 아이템을 최근 본 목록의 가장 앞으로 추가
+  currentHistory.unshift(id);
 
-	localStorage.setItem('recentlyViewed', JSON.stringify(currentHistory));
-}, [id]); // id가 변경될 때마다 이 useEffect 실행
+  localStorage.setItem('recentlyViewed', JSON.stringify(currentHistory));
+}, [id]); // id가 변경될 때마다 이 useEffect 실행 
+
 ```
   
 ```js
 <ul className="mx-2 my-9 h-[calc(100vh-120px)] overflow-auto px-3">
-{!items ? (
-	<Spinner size={130} />
-) : items.length > 0 ? (
-	items?.map((item) => (
-		<li key={item.id} onMouseEnter={() => setIsHovered(item.id)} onMouseLeave={() => setIsHovered(null)}>
-			<Link to={`/products/${item.id}`} className="mb-6 flex justify-stretch gap-4 hover:bg-gray-100 hover:scale-[98%]">
-				<div>
-					<img src={getProductsImage(item, 'photo')} alt={item.name} key={item.id} className="h-28 w-24 rounded-md" />
-				</div>
-				<dl className="relative flex w-full flex-col gap-3 py-2">
-					{isHovered === item.id && (
-						<button
-							onClick={(event) => {
-								event.preventDefault();
-								event.stopPropagation();
-								handleDelete(item.id);
-							}}
-							className="absolute right-3 top-2 rounded-lg border p-3 hover:bg-gray-200 active:scale-95"
-						>
-							삭제
-						</button>
-					)}
-					<dt className="sr-only">브랜드</dt>
-					<dd className="font-semibold">{item.brand}</dd>
-					<dt className="sr-only">상품명</dt>
-					<dd className="font-normal text-gray-500">{item.name}</dd>
-					<dt className="sr-only">가격</dt>
-					<dd className="font-normal text-gray-900">{formatNumber(Math.floor(item.price * (1 - item.discount)))} 원</dd>
-				</dl>
-			</Link>
-		</li>
-	))
-) : (
-	<div className="text-lg">최근 본 상품이 없습니다.</div>
-)}
-</ul>
+  {!items ? (
+    <Spinner size={130} />
+  ) : items.length > 0 ? (
+    items?.map((item) => (
+      <li key={item.id} onMouseEnter={() => setIsHovered(item.id)} onMouseLeave={() => setIsHovered(null)}>
+        <Link to={`/products/${item.id}`} className="mb-6 flex justify-stretch gap-4 hover:bg-gray-100 hover:scale-[98%]">
+          <div>
+            <img src={getProductsImage(item, 'photo')} alt={item.name} key={item.id} className="h-28 w-24 rounded-md" />
+          </div>
+          <dl className="relative flex w-full flex-col gap-3 py-2">
+            {isHovered === item.id && (
+              <button
+                onClick={(event) => {
+                  event.preventDefault();
+                  event.stopPropagation();
+                  handleDelete(item.id);
+                }}
+                className="absolute right-3 top-2 rounded-lg border p-3 hover:bg-gray-200 active:scale-95"
+              >
+                삭제
+              </button>
+            )}
+            <dt className="sr-only">브랜드</dt>
+            <dd className="font-semibold">{item.brand}</dd>
+            <dt className="sr-only">상품명</dt>
+            <dd className="font-normal text-gray-500">{item.name}</dd>
+            <dt className="sr-only">가격</dt>
+            <dd className="font-normal text-gray-900">{formatNumber(Math.floor(item.price * (1 - item.discount)))} 원</dd>
+          </dl>
+        </Link>
+      </li> 
+    ))
+  ) : (
+    <div className="text-lg">최근 본 상품이 없습니다.</div> 
+  )}
+</ul> 
+
 ```
 
 ## 🎥 코드리뷰 | 카테고리 페이지 | 정지영
@@ -322,11 +334,11 @@ useEffect(() => {
   };
 
   const handleResetFilteredBrandList = () => {
-
     setFilteredBrands([]);
     setFilteredBrandList([]);
- 
+
     const checkboxes = productFilterListRef.current.querySelectorAll('input');
+    
     checkboxes.forEach((checkbox) => {
       if (checkbox.checked) {
         checkbox.checked = false;
@@ -334,32 +346,22 @@ useEffect(() => {
     });
   };
 
+  
+useEffect(() => {
+	if (data) {
+		const brandList = Array.from(new Set(data.map((product) => product.brand)));
+		setBrands(brandList);
+		setProducts(data);
+	}
+}, [data]);
 
-  useEffect(() => {
-    if (data) {
-      const brandList = Array.from(
-        new Set(data.map((product) => product.brand))
-      );
-      setBrands(brandList);
-      setProducts(data);
-    }
-  }, [data]);
+const filteredProducts =
+	filteredBrandList.length === 0
+	? products
+	: products.filter((product) =>
+			filteredBrandList.some(filterBrandName => product.brand === filterBrandName)
+	  );
 
-  const filteredProducts =
-    filteredBrandList.length === 0
-      ? products
-      : products.filter((product) => {
-          let isFiltered = false;
-
-          for (const filterBrandName of filteredBrandList) {
-            if (product.brand === filterBrandName) {
-              isFiltered = true;
-              break;
-            }
-          }
-
-          return isFiltered;
-        });
 
   ```
 ### 💡 기능설명 | 2. 카테고리 분류
@@ -367,69 +369,84 @@ useEffect(() => {
 - 해당 메뉴 클릭시 카테고리와 일치하는 상품 정보의 데이터를 불러옵니다.
 <img width="300" alt="image" src="https://github.com/FRONTENDSCHOOL6/Mconcept/assets/131527467/f8e9bccc-1cfc-4652-bf72-e8e4afe4e0fe">
 
-```js
-// 카테고리 및 아이템 데이터
+```js// 카테고리 및 아이템 데이터
 const categories = [...]
+
 function ProductCategoryItem() {
-	const [activeItem, setActiveItem] = useState(null);
-	const [isItemsVisible, setIsItemsVisible] = useState({0: true});
-	const [buttonStyles, setButtonStyles] = useState({0: '-30px'});
+  const [activeItem, setActiveItem] = useState(null);
+  const [isItemsVisible, setIsItemsVisible] = useState({0: true});
+  const [buttonStyles, setButtonStyles] = useState({0: '-30px'});
 
-	const handleButtonClick = (index) => {
-		setIsItemsVisible((prevState) => ({
-			...prevState,
-			[index]: !prevState[index],
-		}));
-		setButtonStyles((prevState) => ({
-			...prevState,
-			[index]: prevState[index] ? '0' : '-30px',
-		}));
-	};
+  const handleButtonClick = (index) => {
+    setIsItemsVisible((prevState) => ({
+      ...prevState,
+      [index]: !prevState[index],
+    }));
 
-	return (
-		<>
-			{categories.map((category, index) => (
-				<div key={index} className="my-4 px-2 text-sm leading-8">
-					<a className="text-lg font-bold" href="#" aria-label={index}>
-						<button
-							id="button"
-							type="button"
-							aria-label="플러스"
-							className="float-right mr-2 mt-3 block h-[9px] w-[9px]"
-							style={{
-								backgroundImage: `url("../../public/common/sprīt.png")`,
-								backgroundPositionX: buttonStyles[index] || '0',
-								backgroundPositionY: '-60px',
-								backgroundRepeat: 'no-repeat',
-							}}
-							onClick={() => handleButtonClick(index)}
-						></button>
-					</a>
-					{/* 카테고리 제목에 링크를 추가합니다 */}
-					<Link className="text-lg font-bold" to={`/categoryBrand/${category.entit}`} onClick={() => setActiveItem(category.title)}>
-						<dl key={`${index}-title`}>
-							<dt className="sr-only" aria-label="제목"></dt>
-							<dd className={`item ${activeItem === category.title ? 'item-active' : ''}`}>{category.title}</dd>
-						</dl>
-					</Link>
-					{/* 카테고리 부제목에 링크를 추가합니다 */}
-					{category.items.map((item, id) => (
-						<Link to={`/categoryBrand/${category.eitems && category.eitems[id]}`} key={`${index}-${id}`} onClick={() => setActiveItem(item)}>
-							<dl>
-								<dt className="sr-only" aria-label="부제목"></dt>
-								<motion.dd className={`item ml-2 ${activeItem === item ? 'item-active' : ''} ${isItemsVisible[index] ? '' : 'hidden'}`} whileHover={{opacity: 0.9}}>
-									{item}
-								</motion.dd>
-							</dl>
-						</Link>
-					))}
-				</div>
-			))}
-		</>
-	);
+    setButtonStyles((prevState) => ({
+      ...prevState,
+      [index]: prevState[index] ? '0' : '-30px',
+    }));
+  };
+
+  return (
+    <>
+      {categories.map((category, index) => (
+        <div key={index} className="my-4 px-2 text-sm leading-8">
+          <a className="text-lg font-bold" href="#" aria-label={index}>
+            <button
+              id="button"
+              type="button"
+              aria-label="플러스"
+              className="float-right mr-2 mt-3 block h-[9px] w-[9px]"
+              style={{
+                backgroundImage: `url("../../public/common/sprīt.png")`,
+                backgroundPositionX: buttonStyles[index] || '0',
+                backgroundPositionY: '-60px',
+                backgroundRepeat: 'no-repeat',
+              }}
+              onClick={() => handleButtonClick(index)}
+            ></button>
+          </a>
+
+          {/* 카테고리 제목에 링크를 추가합니다 */}
+          <Link 
+            className="text-lg font-bold" 
+            to={`/categoryBrand/${category.entit}`} 
+            onClick={() => setActiveItem(category.title)}
+          >
+            <dl key={`${index}-title`}>
+              <dt className="sr-only" aria-label="제목"></dt>
+              <dd className={`item ${activeItem === category.title ? 'item-active' : ''}`}>{category.title}</dd>
+            </dl>
+          </Link>
+
+          {/* 카테고리 부제목에 링크를 추가합니다 */}
+          {category.items.map((item, id) => (
+            <Link 
+               to={`/categoryBrand/${category.eitems && category.eitems[id]}`} 
+               key={`${index}-${id}`} 
+               onClick={() => setActiveItem(item)}
+             >
+               <dl>
+                 <dt className="sr-only" aria-label="부제목"></dt>
+                 <motion.dd 
+                   className={`item ml-2 ${activeItem === item ? 'item-active' : ''} ${isItemsVisible[index] ? '' : 'hidden'}`} 
+                   whileHover={{opacity: 0.9}}
+                 >
+                   {item}
+                 </motion.dd>
+               </dl>
+             </Link>  
+           ))}
+         </div>  
+       ))}
+     </>
+   );
 }
 
-export default ProductCategoryItem;
+export default ProductCategoryItem;  
+
 ```
 ### 💡 기능설명 | 3. 상품 아이템 컴포넌트
 - 공통 컴포넌트를 활용하여 UI의 통일성을 높이고, 효율적으로 재사용 가능한 컴포넌트를 만들었습니다.
@@ -438,53 +455,244 @@ export default ProductCategoryItem;
 
 ```js
 function ProductInfo({item, style = ''}) {
-	return (
-		<>
-			<Link to={`/products/${item.id}`}>
-				<motion.div className="img" whileHover={{opacity: 0.8}}>
-					<img src={getProductsImage(item, 'photo')} alt={item.name} key={item.id} />
-				</motion.div>
+  return (
+    <>
+      <Link to={`/products/${item.id}`}>
+        <motion.div className="img" whileHover={{opacity: 0.8}}>
+          <img src={getProductsImage(item, 'photo')} alt={item.name} key={item.id} />
+        </motion.div>
 
-				<div className="relative">
-					<dl className={style[0]}>
-						<dt className="sr-only" aria-label="제목"></dt>
-						<dd className="py-3 text-base font-semibold">{item.brand}</dd>
-						<dt className="sr-only" aria-label="이름"></dt>
-						<dd className="h-[20px] pb-1 text-sm font-normal text-secondary">{item.name}</dd>
-						<dt className="sr-only" aria-label="설명"></dt>
-						<dd className="h-[50px] pb-1 text-sm font-normal text-secondary">{item.description}</dd>
+        <div className="relative">
+          <dl className={style[0]}>
+            <dt className="sr-only" aria-label="제목"></dt>
+            <dd className="py-3 text-base font-semibold">{item.brand}</dd>
 
-						<dt className="sr-only" aria-label="할인가격"></dt>
-						<dd className="b-0 inline font-semibold text-grey-800">{formatNumber(Math.floor(item.price * (1 - item.discount)))}</dd>
-						<dt className="sr-only" aria-label="가격"></dt>
-						{item.discount === 0 ? null : <dd className={`b-0 ${style[1]} inline text-xs font-medium text-grey-200 line-through`}>{item.price}</dd>}
-						<dt className="sr-only" aria-label="할인율"></dt>
-						<dd className={`b-0 inline ${style[2]} font-bold text-tertiary`}>{item.discount !== 0 ? `${Math.floor(item.discount * 100)}%` : null}</dd>
-						<dt className="sr-only" aria-label="태그"></dt>
+            <dt className="sr-only" aria-label="이름"></dt>
+            <dd className="h-[20px] pb-1 text-sm font-normal text-secondary">{item.name}</dd>
 
-						// 라벨 조건부 렌더링	
-						{item.newSeason && <NewSeasonLabel />}
-						{item.celebrity && <CelebrityLabel />}
-						{item.coupon && <CouponLabel />}
-						{item.only && <OnlyLabel />}
-					</dl>
-				</div>
-			</Link>
-		</>
-	);
+            <dt className="sr-only" aria-label="설명"></dt>
+            <dd className="h-[50px] pb-1 text-sm font-normal text-secondary">{item.description}</dd>
+
+            <dt className="sr-only" aria-label="할인가격"></dt>
+            <dd className={`b-0 inline font-semibold ${style[1]} text-grey-800`}>
+              {formatNumber(Math.floor(item.price * (1 - item.discount)))}
+            </dd>
+
+            {item.discount !== 0 && (
+              <>
+                {/* 가격 */}
+                <dt className="sr-only" aria-label="가격"></dt>
+                {/* 할인율 */}
+                {/* 태그 */}
+                { item.newSeason && (<NewSeasonLabel />)}
+                { item.celebrity && (<CelebrityLabel />)}
+                { item.coupon && (<CouponLabel />)}
+                { item.only && (<OnlyLabel />)}
+              </>
+             )}
+          </dl>
+        </div>
+      </Link>  
+    </>
+  );
 }
 
 export default ProductInfo;
+
 ```
 
 </br>
 
 ## 🎥 코드리뷰 | 회원가입 페이지, 로그인 페이지, 헤더 | 이준석
 ### 💡 기능설명 | 1. 회원가입 페이지
+- 계정생성 기능 구현
 - input항목별 value유효성검사 (비일치시 Incorrect Message, toast 작동)
 - 전체동의 체크박스 (전체체크, 전체체크해제, 전체체크시 하위항목 1개 이상 체크해제시 전체체크 해제)
-- 필수동의 항목 미체크시 toast작동</br>
+- 필수동의 항목 미체크시 toast작동
+
 ![join640](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/73566234/c06d0edf-ec13-46b2-a5fc-052430ed0f48)
+
+- 필수동의 항목 미체크시 toast작동
+- input항목별 value유효성검사 (비일치시toast 작동)
+```js
+const handleRegister = async (e) => {
+  e.preventDefault();
+
+  const { name, username, email, password, passwordConfirm } = formState;
+
+  if (name == '') {
+    toast.error(`이름을 입력하세요.`, {
+      style: {
+        padding: '6px 14px',
+        lineHeight: '22px',
+      },
+    });
+    return;
+  }
+
+  if (username == '') {
+    toast.error(`닉네임을 입력하세요.`, {
+      style: {
+        padding: '6px 14px',
+        lineHeight: '22px',
+      },
+    });
+    return;
+  }
+
+  if (email == '') {
+    toast.error(`이메일을 입력하세요.`, {
+      style: {
+        padding: '6px 14px',
+        lineHeight: '22px',
+      },
+    });
+    return;
+  }
+
+  if (password == '') {
+    toast.error(`비밀번호를 입력하세요.`, {
+      style: {
+        padding: '6px 14px',
+        lineHeight: '22px',
+      },
+    });
+    return;
+  }
+
+ //... Other validation checks...
+
+ // PocketBase SDK 인증 요청
+ await pb.collection('users').create({
+   ...formState,
+   emailVisibility: true,
+ });
+
+ navigate('joinComplete');
+};
+
+```
+
+- 전체동의 체크박스 (전체체크, 전체체크해제, 전체체크시 하위항목 1개 이상 체크해제시 전체체크 해제)
+```js
+// 이벤트 정보 토글버튼
+const [isEventChecked, setEventIsChecked] = useState(false);
+
+// 전체동의합니다 체크박스 토글
+const [isAllChecked, setAllIsChecked] = useState(false);
+const handleAllCheckboxChange = () => {
+  let newValue = !isAllChecked;
+
+  setAllIsChecked(newValue);
+  setAgeIsChecked(newValue);
+  setAgreementIsChecked(newValue);
+  setInfoIsChecked(newValue);
+  setInfoUseIsChecked(newValue);
+};
+
+// 만14세 이상입니다 체크박스 토글
+const [isAgeChecked, setAgeIsChecked] = useState(false);
+
+// 이용약관 동의 체크박스 토글
+const [isAgreementChecked, setAgreementIsChecked] = useState(false);
+
+// 개인정보 수집 및 이용에 대한 동의 체크박스 토글
+const [isInfoChecked, setInfoIsChecked] = useState(false);
+
+// 개인정보 수집 및 이용안내 체크박스 토글
+const [isInfoUseChecked, setInfoUseIsChecked] = useState(false);
+
+
+useEffect(() => {
+	if (isAgeCheck && isAgreementCheck && isPrivacyCheck && isPrivacyUsageCheck) {
+		setAllCheck(true);
+	} else if (!isAgeCheck || !isAgreementCheck || !isPrivacyCheck || !isPrivacyUsageCheck) {
+		setAllCheck(false);
+	}
+}, [
+	isAgeChec,
+	isAgreementChec,
+	isPrivacyChec,
+	isPrivacyUsageChec,
+]);
+
+```
+
+
+
+### 💡 기능설명 | 2. 로그인 페이지
+- 인증기능 구현
+- 아이디, 비밀번호 비일치시 toast 작동
+
+![login_640](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/73566234/40c84b91-1e13-44f4-a79c-1cf3f32105ca)
+
+![image](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/73566234/fc16e1a4-400c-4e01-9959-8c2248e30803)
+
+
+```js
+const [formState, setFormState] = useState({
+  email: '',
+  password: '',
+});
+
+const handleSignIn = async (e) => {
+  e.preventDefault();
+
+  const { email, password } = formState;
+
+  try {
+    const response = await pb.collection('users').authWithPassword(email, password);
+
+    if (!state) {
+      navigate('/');
+    } else {
+      const { wishLocationPath } = state;
+      navigate(wishLocationPath === '/signin' ? '/' : wishLocationPath);
+    }
+    
+  } catch (error) {
+    console.error(error);
+    toast.error(`아이디 또는 비밀번호가 일치하지 않습니다. 다시 입력해주세요`, {
+      style: {
+        padding: '6px 14px',
+        lineHeight: '22px',
+      },
+    });
+  }
+}
+
+```
+
+
+### 💡 기능설명 | 3. 헤더
+- 리스트 렌더링으로 카테고리 리스트 생성
+
+![header640](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/73566234/4dc7ec58-38af-4b26-a85c-0fe1022b6bd1)
+
+
+```js
+{catagoryList.map((item) => (
+  <ul key={item.id} className="block w-[177px] pl-[30px] pr-[20px]">
+    <li className="depth2 mb-[12px] ">
+      <a href="#" className="text-[14px] hover:underline hover:underline-offset-2">
+        {item.categoryTitle}
+      </a>
+    </li>
+    {item.categoryItem.map((subItem) => (
+      <li key={subItem.id}>
+        <NavLink 
+          to={subItem.link} 
+          className="overflow-hidden text-ellipsis text-[13px] uppercase leading-[16px] text-[#7b7b7b] hover:text-[#000]"
+        >
+          {subItem.itemTitle}
+        </NavLink>
+      </li>
+    ))}
+  </ul>
+))}
+
+```
+
 
 
 
