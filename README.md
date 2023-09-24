@@ -303,7 +303,7 @@ useEffect(() => {
 
 ### 💡 기능설명 | 1. 카테고리 필터
 - CategoryBrand 페이지에서 해당되는 브랜드 이름의 체크박스를 선택 후 필터적용 버튼 클릭시 해당 상품의 아이템이 렌더링 됩니다.
-- ```js
+```js
   function CategoryBrand() {
   const productFilterListRef = useRef(null);
   const [brands, setBrands] = useState([]);
