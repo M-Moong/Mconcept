@@ -1,5 +1,4 @@
 import {useParams} from 'react-router-dom';
-// import {getProductsImage} from '@/utils/getProductsImage';
 import React, {useEffect, useState} from 'react';
 import pb from '@/api/pocketbase';
 import getProductsImageArray from '../../utils/getProductsImageArray';
@@ -20,7 +19,6 @@ function DetailsDetail({data}) {
 				}
 			}
 		}
-		// getProduct();
 	}, []);
 
 	if (data) {

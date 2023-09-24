@@ -2,8 +2,6 @@ import pb from '@/api/pocketbase';
 import {useParams} from 'react-router-dom';
 import React, {useEffect, useState} from 'react';
 
-import mybrand from '../../assets/images/detail/bg_heart.png';
-import share from '../../assets/images/detail/share.png';
 import star from '../../assets/images/detail/star.png';
 import tooltip from '../../assets/images/detail/tooltip.png';
 import {getProductsImage} from '@/utils/getProductsImage';
@@ -13,24 +11,6 @@ import hearton from '../../assets/images/detail/ico_prod_heart_on.svg';
 import plusIcon from '../../assets/images/detail/bg_plus.gif';
 
 function DetailsProducts({data}) {
-	// const [zoom, setZoom] = useState(false);
-	// const [position, setPosition] = useState({x: 0, y: 0});
-
-	// function handleMouseOver(e) {
-	// 	const {left, top} = e.target.getBoundingClientRect();
-	// 	setPosition({x: e.clientX - left, y: e.clientY - top});
-	// 	setZoom(true);
-	// }
-
-	// function handleMouseMove(e) {
-	// 	const {left, top} = e.target.getBoundingClientRect();
-	// 	setPosition({x: e.clientX - left, y: e.clientY - top});
-	// }
-
-	// function handleMouseOut() {
-	// 	setZoom(false);
-	// }
-
 	const {id} = useParams();
 
 	const [size, setSize] = useState('');
@@ -60,28 +40,16 @@ function DetailsProducts({data}) {
 				}
 			}
 		}
-		// getProduct();
 	}, []);
 
 	if (data) {
 		return (
 			<section className="flex-rows mb-10 flex">
 				<div className="mr-[55px]">
-					{/* <div>
-									<img src={thumbnail01} alt="" onClick={handleImageClick} />
-									{zoomedArea && <img src={thumbnail01} alt="=" />}
-								</div> */}
-
-					{/* <div className="zoom-lens-container" onMouseOver={handleMouseOver} onMouseMove={handleMouseMove} onMouseOut={handleMouseOut}>
-						<img src={getProductsImage(data, 'photo')} alt={data.name} key={data.id} className="mb-5 w-[525px]" />
-
-						{zoom && <div className="lens" style={{backgroundImage: `url(${image})`, backgroundPosition: `${position.x}px ${position.y}px`}} />}
-					</div> */}
-
 					<img src={getProductsImage(data, 'photo')} alt={data.name} key={data.id} className="mb-5 w-[525px]" />
 				</div>
 
-				<div className="relative w-[660px]">
+				<div className="w-[660px]">
 					<div className="border-b-2 border-black">
 						<h4 className="mb-4 text-[24px] font-medium">{data.brand}</h4>
 						<p className="mb-5 text-base font-normal">{data.name}</p>
@@ -97,8 +65,9 @@ function DetailsProducts({data}) {
 
 						<dl className="mb-4">
 							<dt className="float-left w-[125px] py-2 text-[13px]">정상가</dt>
-							<dd className="flex flex-row py-2 text-[18px] text-grey-200">
-								{data.price} <p className="text-base">원</p>
+							<dd className="flex flex-row py-2 text-grey-200">
+								<span className=" text-[18px] line-through">{data.price}</span>
+								<span className="ml-1 mt-1 text-base">원</span>
 							</dd>
 							<dt className="float-left w-[125px] py-2">
 								<span className="mr-2 text-[13px]">할인적용가</span>
@@ -107,28 +76,29 @@ function DetailsProducts({data}) {
 								</button>
 							</dt>
 							<dd className="flex flex-row py-2">
-								74,900<p>원</p>
-								<span className="text-tertiary">31&#37;</span>
+								<span className="text-mlg font-semibold">34,900</span>
+								<span className="mt-[2px]">원</span>
+								<span className="ml-2 text-mlg font-semibold text-tertiary">31&#37;</span>
 							</dd>
 						</dl>
 					</div>
 
-					<div className="border-b-[1px] border-grey-100 py-5">
+					<div className="relative border-b-[1px] border-grey-100 py-5">
 						<dl className="mb-4">
 							<dt className="float-left w-[125px] py-2 text-[13px]">신규회원 혜택가</dt>
-							<dd className="flex flex-row py-2 text-[18px]">
-								67,410 <p className="text-base">원</p>
+							<dd className="flex flex-row py-2 text-[16px]">
+								67,410 <p className="ml-[2px] mt-1 text-sm">원</p>
 							</dd>
 							<dt className="float-left w-[125px] py-2 text-[13px]">추가혜택가</dt>
-							<dd className="flex flex-col py-2 text-sm text-grey-800">
+							<dd className="flex w-[425px] flex-col py-2 text-sm text-grey-800">
 								<span>KakaoPay 할인 5,000원 할인</span>
 								<span>카카오페이로 신한카드 10만원 이상 결제 시 5천원 즉시할인</span>
 							</dd>
 						</dl>
-						<button className="absolute right-0 text-sm text-[#333] underline">추가혜택 더보기 &#62;</button>
+						<button className="absolute bottom-16 right-0 text-sm text-[#333] underline">추가혜택 더보기 &#62;</button>
 					</div>
 
-					<div className="py-5">
+					<div className="relative py-5">
 						<dl className="mb-4">
 							<dt className="float-left w-[125px] py-2 text-[13px]">무이자 할부</dt>
 							<dd className="flex flex-row py-2 ">
@@ -146,9 +116,8 @@ function DetailsProducts({data}) {
 									<img src={plusIcon} alt="" />
 								</button>
 							</dd>
+							<button className="absolute right-0 text-sm text-[#333] underline">사이즈 가이드 &#62;</button>
 						</dl>
-
-						<button className="absolute right-0 text-sm text-[#333] underline">사이즈 가이드 &#62;</button>
 
 						<div className="py-4">
 							<label>

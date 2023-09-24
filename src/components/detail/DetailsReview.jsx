@@ -37,8 +37,6 @@ function DetailsReview() {
 				</a>
 			</div>
 
-			{/* 리뷰 탭에서 사용하기 */}
-
 			<ul className="mb-4 flex flex-row">
 				<li className="mr-3 text-base text-grey-400">
 					<button onClick={() => handleTabClick('DETAIL')}>
@@ -64,16 +62,6 @@ function DetailsReview() {
 					</button>
 				</li>
 			</ul>
-
-			{/* <div className="mb-8 border-b-2 border-black"></div> */}
-			{/* 
-			<div>
-				<ul>
-					<li>상품 만족도 (55)</li>
-					<li>구매하신 분들의 상품에 대한 평점입니다.</li>
-					<li></li>
-				</ul>
-			</div> */}
 
 			<ul className="mb-16 flex flex-row justify-between">
 				<li>
