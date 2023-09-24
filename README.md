@@ -174,7 +174,7 @@
 ### 💡 기능설명 | 2. 상품정보 리스트 렌더링
 - 서버에서 데이터 정보를 불러와 리스트 렌더링을 구현하였습니다.
 ![메인페이지_리스트 렌더링](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/109510367/fa227626-5909-43b5-8a46-a4668870ea48)
-```
+```js
 const getProducts = async () => {
 	return await pb.collection('products').getFullList();
 };
@@ -241,7 +241,7 @@ function MakeItYours() {
   
 ![메인페이지_로컬스토리지 활용](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/109510367/67bac59d-d3fa-4aa2-83b3-7eb284a21770)
 
-```
+```js
 useEffect(() => {
 	// 현재 로컬 스토리지에 저장된 데이터 가져오기
 	let currentHistory = JSON.parse(localStorage.getItem('recentlyViewed')) || [];
@@ -258,7 +258,7 @@ useEffect(() => {
 }, [id]); // id가 변경될 때마다 이 useEffect 실행
 ```
   
-```
+```js
 <ul className="mx-2 my-9 h-[calc(100vh-120px)] overflow-auto px-3">
 {!items ? (
 	<Spinner size={130} />
@@ -303,7 +303,7 @@ useEffect(() => {
 
 ### 💡 기능설명 | 1. 카테고리 필터
 - CategoryBrand 페이지에서 해당되는 브랜드 이름의 체크박스를 선택 후 필터적용 버튼 클릭시 해당 상품의 아이템이 렌더링 됩니다.
-- ```
+- ```js
   function CategoryBrand() {
   const productFilterListRef = useRef(null);
   const [brands, setBrands] = useState([]);
@@ -363,7 +363,7 @@ useEffect(() => {
 ### 💡 기능설명 | 2. 카테고리 분류
 - 카테고리 메뉴를 리스트 렌더링 하여 컴포넌트화 하고, 버튼 클릭시 메뉴를 열고 닫는 드롭다운 기능을 구현했습니다.<br/>
 - 해당 메뉴 클릭시 카테고리와 일치하는 상품 정보의 데이터를 불러옵니다.
-```
+```js
 // 카테고리 및 아이템 데이터
 const categories = [...]
 function ProductCategoryItem() {
@@ -429,7 +429,7 @@ export default ProductCategoryItem;
 ```
 ### 💡 기능설명 | 3. 컴포넌트
 - 공통 컴포넌트를 활용하여 UI의 통일성을 높이고, 효율적으로 재사용 가능한 컴포넌트를 만들었습니다.
-```
+```js
 function ProductInfo({item, style = ''}) {
 	return (
 		<>
