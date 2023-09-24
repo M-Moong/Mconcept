@@ -118,14 +118,179 @@
 
 ## 🎥 코드리뷰 | 메인 페이지 | 신승민
 - 간단한 설명 및 gif 첨부
-### 💡 기능설명 | 1. Swiper
-- 간단한 설명
-- ![메인페이지_Swiper js](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/109510367/a4b3e8a4-818f-467d-b518-0a21cc804ccb)
+### 💡 기능설명 | 1. 메인배너 Swiper 슬라이드
+- 메인 페이지의 이벤트 배너를 스와이퍼 슬라이드로 구현 하였습니다.(접근성을 위해 일시정지와 재생버튼도 추가하였습니다.)
+![메인페이지_Swiper js](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/109510367/a4b3e8a4-818f-467d-b518-0a21cc804ccb)
 
-- ```code```
-### 💡 기능설명 | 2. Swiper
-- 간단한 설명
-- ```code```
+- ```<Swiper
+						ref={swiperRef}
+						slidesPerView={1}
+						spaceBetween={30}
+						loop={true}
+						pagination={{
+							clickable: true,
+						}}
+						autoplay={{
+							delay: 2000,
+							disableOnInteraction: false,
+						}}
+						centeredSlides={true}
+						navigation={{
+							nextEl: '#nnavi',
+							prevEl: '#pnavi',
+						}}
+						modules={[Autoplay, Pagination, Navigation]}
+						onAutoplayTimeLeft={onAutoplayTimeLeft}
+						className="mySwiper"
+					>
+						{mainBanner.map((item) => {
+							return (
+								<SwiperSlide key={item}>
+									<a href="#">
+										<img src={item} alt="" className='w-full h-full'/>
+									</a>
+								</SwiperSlide>
+							);
+						})}
+						{/* 이전, 다음 버튼 */}
+						<div className="swiper-button-prev" id="pnavi"></div>
+						<div className="swiper-button-next" id="nnavi"></div>
+						{/* 일시정지 버튼 */}
+						<button onClick={handlePause} className="swiperPause" aria-label="일시정지">
+							<FaPause className="faPause" />
+						</button>
+						{/* 재생 버튼  */}
+						<button onClick={handlePlay} className="swiperPlay" aria-label="재생">
+							<FaPlay className="faPlay" />
+						</button>
+						{/* 타이머 */}
+						<div className="autoplay-progress" slot="container-end">
+							<svg viewBox="0 0 48 48" ref={progressCircle}>
+								<circle cx="24" cy="24" r="20"></circle>
+							</svg>
+							<span ref={progressContent}></span>
+						</div>
+					</Swiper>```
+  
+### 💡 기능설명 | 2. 상품정보 리스트 렌더링
+- 서버에서 데이터 정보를 불러와 리스트 렌더링을 구현하였습니다.
+![메인페이지_리스트 렌더링](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/109510367/fa227626-5909-43b5-8a46-a4668870ea48)
+- ```const getProducts = async () => {
+	return await pb.collection('products').getFullList();
+};
+
+function MakeItYours() {
+	const {isLoading, data, isError, error} = useQuery({
+		queryKey: ['products'],
+		queryFn: getProducts,
+		retry: 2,
+		refetchOnWindowFocus: false,
+		refetchOnReconnect: false,
+	});
+
+	if (isError) {
+		return <div role="alert">{error.toString()}</div>;
+	}
+
+	return (
+		<>
+			<section className="relative mx-auto mb-32">
+				<h2 className="mb-8 text-center text-[54px] font-thin">MAKE IT YOURS</h2>
+				{isLoading ? (
+					<div className="grid h-full place-content-center">
+						<Spinner size={160} />
+					</div>
+				) : (
+					<div className="flex px-20">
+						<Swiper
+							slidesPerView={6}
+							spaceBetween={20}
+							loop={true}
+							navigation={{
+								nextEl: '#nextNavi',
+								prevEl: '#preNavi',
+							}}
+							autoplay={{
+								delay: 2000,
+								disableOnInteraction: false,
+							}}
+							modules={[Navigation, Autoplay]}
+							className="mySwiper"
+						>
+							{data
+								?.filter((item) => item.main == true)
+								.map((item) => {
+									return (
+										<SwiperSlide key={item.id}>
+											<ProductInfo item={item} style={style} />
+										</SwiperSlide>
+									);
+								})}
+						</Swiper>
+						<div className="swiper-button-prev" id="preNavi"></div>
+						<div className="swiper-button-next" id="nextNavi"></div>
+					</div>
+				)}
+			</section>
+		</>
+	);
+}```
+
+### 💡 기능설명 | 3. 최근 본 상품 팝업
+- 로컬스토리지에 상품 아이디를 담아 최근 본 상품 페이지를 구현하였습니다.
+![메인페이지_로컬스토리지 활용](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/109510367/67bac59d-d3fa-4aa2-83b3-7eb284a21770)
+- ```useEffect(() => {
+		// 현재 로컬 스토리지에 저장된 데이터 가져오기
+		let currentHistory = JSON.parse(localStorage.getItem('recentlyViewed')) || [];
+
+		// 새로운 아이템이 이미 리스트에 있는지 확인하고 있다면 삭제
+		if (currentHistory.find((item) => item === id)) {
+			currentHistory = currentHistory.filter((item) => item !== id);
+		}
+
+		// 현재 보고 있는 아이템을 최근 본 목록의 가장 앞으로 추가
+		currentHistory.unshift(id);
+
+		localStorage.setItem('recentlyViewed', JSON.stringify(currentHistory));
+	}, [id]); // id가 변경될 때마다 이 useEffect 실행```
+  
+- ```<ul className="mx-2 my-9 h-[calc(100vh-120px)] overflow-auto px-3">
+						{!items ? (
+							<Spinner size={130} />
+						) : items.length > 0 ? (
+							items?.map((item) => (
+								<li key={item.id} onMouseEnter={() => setIsHovered(item.id)} onMouseLeave={() => setIsHovered(null)}>
+									<Link to={`/products/${item.id}`} className="mb-6 flex justify-stretch gap-4 hover:bg-gray-100 hover:scale-[98%]">
+										<div>
+											<img src={getProductsImage(item, 'photo')} alt={item.name} key={item.id} className="h-28 w-24 rounded-md" />
+										</div>
+										<dl className="relative flex w-full flex-col gap-3 py-2">
+											{isHovered === item.id && (
+												<button
+													onClick={(event) => {
+														event.preventDefault();
+														event.stopPropagation();
+														handleDelete(item.id);
+													}}
+													className="absolute right-3 top-2 rounded-lg border p-3 hover:bg-gray-200 active:scale-95"
+												>
+													삭제
+												</button>
+											)}
+											<dt className="sr-only">브랜드</dt>
+											<dd className="font-semibold">{item.brand}</dd>
+											<dt className="sr-only">상품명</dt>
+											<dd className="font-normal text-gray-500">{item.name}</dd>
+											<dt className="sr-only">가격</dt>
+											<dd className="font-normal text-gray-900">{formatNumber(Math.floor(item.price * (1 - item.discount)))} 원</dd>
+										</dl>
+									</Link>
+								</li>
+							))
+						) : (
+							<div className="text-lg">최근 본 상품이 없습니다.</div>
+						)}
+					</ul>```
 
 ## 🎥 코드리뷰 | 카테고리 페이지 | 정지영
 ![ezgif com-optimize](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/131527467/99fd38cc-446c-4db2-99db-e4307b224197)
