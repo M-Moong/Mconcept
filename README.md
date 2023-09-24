@@ -120,6 +120,8 @@
 - 간단한 설명 및 gif 첨부
 ### 💡 기능설명 | 1. Swiper
 - 간단한 설명
+- ![메인페이지_Swiper js](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/109510367/a4b3e8a4-818f-467d-b518-0a21cc804ccb)
+
 - ```code```
 ### 💡 기능설명 | 2. Swiper
 - 간단한 설명
