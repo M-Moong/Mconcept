@@ -313,6 +313,16 @@ useEffect(() => {
 
 </br>
 
+## 🎥 코드리뷰 | 회원가입 페이지, 로그인 페이지, 헤더 | 이준석
+### 💡 기능설명 | 1. 회원가입 페이지
+- input항목별 value유효성검사 (비일치시 Incorrect Message, toast 작동)
+- 전체동의 체크박스 (전체체크, 전체체크해제, 전체체크시 하위항목 1개 이상 체크해제시 전체체크 해제)
+- 필수동의 항목 미체크시 toast작동</br>
+![join640](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/73566234/c06d0edf-ec13-46b2-a5fc-052430ed0f48)
+
+
+
+
 # 7. 💎 성능검사
 - Light House를 통해 성능, 접근성, 권장사항, 검색엔진 최적화 4가지 항목을 검사하고 권장사항을 지킵니다.
 
