@@ -885,7 +885,7 @@ export default DetailsProducts;
 | 신승민         | - 메인페이지 : <br/> 1. Performance를 향상 시키기 위해 이미지 최적화를 진행하였습니다. <br/> 2. 접근성 향상을 위해 불필요한 태그들을 삭제하고 용도에 맞는 시맨틱한 마크업으로 재구성하였습니다. <br/> 3. SEO를 높이기 위해 meta태그를 설정하여 검색 최적화를 하였습니다. <br/><br/> 성능 최적화 전 <br/> ![성능 최적화 전](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/109510367/6075f298-532f-4d38-9eb3-91f734bcffa9) <br/><br/> 성능최적화 후 <br/>![성능 최적화 후](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/109510367/eb4fc103-6d38-4696-87ff-3988490ad6b3) |
 | 이준석         | - 로그인 <br/> <img width="582" alt="image" src="https://github.com/FRONTENDSCHOOL6/Mconcept/assets/73566234/a7d313fa-9611-4a18-9cb9-243c79e77e14"><br/> <br/>  - 회원가입 <br/><img width="573" alt="image" src="https://github.com/FRONTENDSCHOOL6/Mconcept/assets/73566234/61b4a209-23f2-411a-a296-aba8a481d9c8"><br/><br/>  - 회원가입 완료 <br/><img width="581" alt="image" src="https://github.com/FRONTENDSCHOOL6/Mconcept/assets/73566234/77d05c86-fddd-4059-b302-dc59b4a5ae7e"><br/><br/>- 헤더 <br/><img width="583" alt="image" src="https://github.com/FRONTENDSCHOOL6/Mconcept/assets/73566234/8b655fba-14b8-45c2-b459-1a36ff8aa5d0"><br/> |
 
-| 이수연         | - 상세페이지<br/> | <img width="580" alt="2023-09-25_2 34 46" src="https://github.com/FRONTENDSCHOOL6/Mconcept/assets/134567438/9ac27d5f-76dd-4bf2-a4d4-72de5238e8e2"> <br/> |
+| 이수연         |  - 상세페이지 <br/> | <img width="580" alt="2023-09-25_2 34 46" src="https://github.com/FRONTENDSCHOOL6/Mconcept/assets/134567438/9ac27d5f-76dd-4bf2-a4d4-72de5238e8e2"> <br/> |
 | 정지영         |  - 카테고리 페이지 </br> ![image](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/131527467/53e6c8e4-b751-4fc6-b789-5157f6290293) |
 
 </br>
