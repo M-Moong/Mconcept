@@ -303,6 +303,8 @@ useEffect(() => {
 
 ### 💡 기능설명 | 1. 카테고리 필터
 - CategoryBrand 페이지에서 해당되는 브랜드 이름의 체크박스를 선택 후 필터적용 버튼 클릭시 해당 상품의 아이템이 렌더링 됩니다.
+<img width="1184" alt="image" src="https://github.com/FRONTENDSCHOOL6/Mconcept/assets/131527467/432b8221-4f91-4a87-97eb-7755b40b5707">
+
 ```js
   function CategoryBrand() {
   const productFilterListRef = useRef(null);
@@ -363,6 +365,8 @@ useEffect(() => {
 ### 💡 기능설명 | 2. 카테고리 분류
 - 카테고리 메뉴를 리스트 렌더링 하여 컴포넌트화 하고, 버튼 클릭시 메뉴를 열고 닫는 드롭다운 기능을 구현했습니다.<br/>
 - 해당 메뉴 클릭시 카테고리와 일치하는 상품 정보의 데이터를 불러옵니다.
+<img width="300" alt="image" src="https://github.com/FRONTENDSCHOOL6/Mconcept/assets/131527467/f8e9bccc-1cfc-4652-bf72-e8e4afe4e0fe">
+
 ```js
 // 카테고리 및 아이템 데이터
 const categories = [...]
@@ -429,6 +433,8 @@ export default ProductCategoryItem;
 ```
 ### 💡 기능설명 | 3. 상품 아이템 컴포넌트
 - 공통 컴포넌트를 활용하여 UI의 통일성을 높이고, 효율적으로 재사용 가능한 컴포넌트를 만들었습니다.
+<img width="190" alt="image" src="https://github.com/FRONTENDSCHOOL6/Mconcept/assets/131527467/4720b910-18a8-483f-a53b-e6035420e12a">
+
 ```js
 function ProductInfo({item, style = ''}) {
 	return (
@@ -455,6 +461,7 @@ function ProductInfo({item, style = ''}) {
 						<dd className={`b-0 inline ${style[2]} font-bold text-tertiary`}>{item.discount !== 0 ? `${Math.floor(item.discount * 100)}%` : null}</dd>
 						<dt className="sr-only" aria-label="태그"></dt>
 
+						// 라벨 조건부 렌더링	
 						{item.newSeason && <NewSeasonLabel />}
 						{item.celebrity && <CelebrityLabel />}
 						{item.coupon && <CouponLabel />}
