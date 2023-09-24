@@ -512,9 +512,14 @@ export default ProductInfo;
 
 ![join640](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/73566234/c06d0edf-ec13-46b2-a5fc-052430ed0f48)
 
-- 필수동의 항목 미체크시 toast작동
-- input항목별 value유효성검사 (비일치시toast 작동)
+
 ```js
+//필수동의 항목 미체크시 toast작동
+//input항목별 value유효성검사 (비일치시toast 작동)
+
+
+
+
 const handleRegister = async (e) => {
   e.preventDefault();
 
@@ -573,8 +578,12 @@ const handleRegister = async (e) => {
 
 ```
 
-- 전체동의 체크박스 (전체체크, 전체체크해제, 전체체크시 하위항목 1개 이상 체크해제시 전체체크 해제)
+
 ```js
+//전체동의 체크박스 (전체체크, 전체체크해제, 전체체크시 하위항목 1개 이상 체크해제시 전체체크 해제)
+
+
+
 // 이벤트 정보 토글버튼
 const [isEventChecked, setEventIsChecked] = useState(false);
 
@@ -630,6 +639,10 @@ useEffect(() => {
 
 
 ```js
+//인증기능 구현
+//아이디, 비밀번호 비일치시 toast 작동
+
+
 const [formState, setFormState] = useState({
   email: '',
   password: '',
@@ -671,6 +684,10 @@ const handleSignIn = async (e) => {
 
 
 ```js
+//리스트 렌더링으로 카테고리 리스트 생성
+
+
+
 {catagoryList.map((item) => (
   <ul key={item.id} className="block w-[177px] pl-[30px] pr-[20px]">
     <li className="depth2 mb-[12px] ">
