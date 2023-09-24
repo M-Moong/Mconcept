@@ -302,14 +302,203 @@ useEffect(() => {
 ![ezgif com-optimize](https://github.com/FRONTENDSCHOOL6/Mconcept/assets/131527467/99fd38cc-446c-4db2-99db-e4307b224197)
 
 ### 💡 기능설명 | 1. 카테고리 필터
-- 간단한 설명
-- ```code```
+- CategoryBrand 페이지에서 해당되는 브랜드 이름의 체크박스를 선택 후 필터적용 버튼 클릭시 해당 상품의 아이템이 렌더링 됩니다.
+- ```
+  function CategoryBrand() {
+  const productFilterListRef = useRef(null);
+  const [brands, setBrands] = useState([]);
+  const [products, setProducts] = useState([]);
+  const [filteredBrands, setFilteredBrands] = useState([]);
+  const [filteredBrandList, setFilteredBrandList] = useState([]);
+
+  const handleChangeFilter = (newBrandName) => {
+    setFilteredBrands((filteredBrands) => [...filteredBrands, newBrandName]);
+  };
+
+  const handleAssignFilter = () => {
+    setFilteredBrandList(filteredBrands);
+  };
+
+  const handleResetFilteredBrandList = () => {
+
+    setFilteredBrands([]);
+    setFilteredBrandList([]);
+ 
+    const checkboxes = productFilterListRef.current.querySelectorAll('input');
+    checkboxes.forEach((checkbox) => {
+      if (checkbox.checked) {
+        checkbox.checked = false;
+      }
+    });
+  };
+
+
+  useEffect(() => {
+    if (data) {
+      const brandList = Array.from(
+        new Set(data.map((product) => product.brand))
+      );
+      setBrands(brandList);
+      setProducts(data);
+    }
+  }, [data]);
+
+  const filteredProducts =
+    filteredBrandList.length === 0
+      ? products
+      : products.filter((product) => {
+          let isFiltered = false;
+
+          for (const filterBrandName of filteredBrandList) {
+            if (product.brand === filterBrandName) {
+              isFiltered = true;
+              break;
+            }
+          }
+
+          return isFiltered;
+        });
+
+  ```
 ### 💡 기능설명 | 2. 카테고리 분류
-- 간단한 설명
-- ```code```
+- 카테고리 메뉴를 리스트 렌더링 하여 컴포넌트화 하고, 버튼 클릭시 메뉴를 열고 닫는 드롭다운 기능을 구현했습니다.<br/>
+해당 메뉴 클릭시 카테고리와 일치하는 상품 정보의 데이터를 불러옵니다.
+```
+// 카테고리 및 아이템 데이터
+const categories = [
+	{
+		id: '1',
+		title: '아우터',
+		entit: 'outer',
+		items: ['자켓', '점퍼', '패딩', '코트'],
+		eitems: ['jacket', 'jumper', 'padding', 'coat'],
+	},
+	{
+		id: '2',
+		title: '팬츠',
+		entit: 'pants',
+		items: ['슬랙스', '쇼츠', '치노', '조거'],
+		eitems: ['slacks', 'shorts', 'chinos', 'jogger'],
+	},
+	{
+		id: '3',
+		title: '티셔츠',
+		entit: 'tshirts',
+		items: ['슬리브', '스웻', '후드', '롱슬리브'],
+		eitems: ['sleeves', 'sweats', 'Hood', 'longsleeves'],
+	},
+	{
+		id: '4',
+		title: '니트',
+		entit: 'neat',
+		items: ['풀오버', '가디건', '베스트', '터틀넥'],
+		eitems: ['pullover', 'cardigan', 'best', 'turtleneck'],
+	},
+];
+
+function ProductCategoryItem() {
+	const [activeItem, setActiveItem] = useState(null);
+	const [isItemsVisible, setIsItemsVisible] = useState({0: true});
+	const [buttonStyles, setButtonStyles] = useState({0: '-30px'});
+
+	const handleButtonClick = (index) => {
+		setIsItemsVisible((prevState) => ({
+			...prevState,
+			[index]: !prevState[index],
+		}));
+		setButtonStyles((prevState) => ({
+			...prevState,
+			[index]: prevState[index] ? '0' : '-30px',
+		}));
+	};
+
+	return (
+		<>
+			{categories.map((category, index) => (
+				<div key={index} className="my-4 px-2 text-sm leading-8">
+					<a className="text-lg font-bold" href="#" aria-label={index}>
+						<button
+							id="button"
+							type="button"
+							aria-label="플러스"
+							className="float-right mr-2 mt-3 block h-[9px] w-[9px]"
+							style={{
+								backgroundImage: `url("../../public/common/sprīt.png")`,
+								backgroundPositionX: buttonStyles[index] || '0',
+								backgroundPositionY: '-60px',
+								backgroundRepeat: 'no-repeat',
+							}}
+							onClick={() => handleButtonClick(index)}
+						></button>
+					</a>
+					{/* 카테고리 제목에 링크를 추가합니다 */}
+					<Link className="text-lg font-bold" to={`/categoryBrand/${category.entit}`} onClick={() => setActiveItem(category.title)}>
+						<dl key={`${index}-title`}>
+							<dt className="sr-only" aria-label="제목"></dt>
+							<dd className={`item ${activeItem === category.title ? 'item-active' : ''}`}>{category.title}</dd>
+						</dl>
+					</Link>
+					{/* 카테고리 부제목에 링크를 추가합니다 */}
+					{category.items.map((item, id) => (
+						<Link to={`/categoryBrand/${category.eitems && category.eitems[id]}`} key={`${index}-${id}`} onClick={() => setActiveItem(item)}>
+							<dl>
+								<dt className="sr-only" aria-label="부제목"></dt>
+								<motion.dd className={`item ml-2 ${activeItem === item ? 'item-active' : ''} ${isItemsVisible[index] ? '' : 'hidden'}`} whileHover={{opacity: 0.9}}>
+									{item}
+								</motion.dd>
+							</dl>
+						</Link>
+					))}
+				</div>
+			))}
+		</>
+	);
+}
+
+export default ProductCategoryItem;
+```
 ### 💡 기능설명 | 3. 컴포넌트
-- 간단한 설명
-- ```code```
+- 공통 컴포넌트를 활용하여 UI의 통일성을 높이고, 효율적으로 재사용 가능한 컴포넌트를 만들었습니다.
+-
+```
+function ProductInfo({item, style = ''}) {
+	return (
+		<>
+			<Link to={`/products/${item.id}`}>
+				<motion.div className="img" whileHover={{opacity: 0.8}}>
+					<img src={getProductsImage(item, 'photo')} alt={item.name} key={item.id} />
+				</motion.div>
+
+				<div className="relative">
+					<dl className={style[0]}>
+						<dt className="sr-only" aria-label="제목"></dt>
+						<dd className="py-3 text-base font-semibold">{item.brand}</dd>
+						<dt className="sr-only" aria-label="이름"></dt>
+						<dd className="h-[20px] pb-1 text-sm font-normal text-secondary">{item.name}</dd>
+						<dt className="sr-only" aria-label="설명"></dt>
+						<dd className="h-[50px] pb-1 text-sm font-normal text-secondary">{item.description}</dd>
+
+						<dt className="sr-only" aria-label="할인가격"></dt>
+						<dd className="b-0 inline font-semibold text-grey-800">{formatNumber(Math.floor(item.price * (1 - item.discount)))}</dd>
+						<dt className="sr-only" aria-label="가격"></dt>
+						{item.discount === 0 ? null : <dd className={`b-0 ${style[1]} inline text-xs font-medium text-grey-200 line-through`}>{item.price}</dd>}
+						<dt className="sr-only" aria-label="할인율"></dt>
+						<dd className={`b-0 inline ${style[2]} font-bold text-tertiary`}>{item.discount !== 0 ? `${Math.floor(item.discount * 100)}%` : null}</dd>
+						<dt className="sr-only" aria-label="태그"></dt>
+
+						{item.newSeason && <NewSeasonLabel />}
+						{item.celebrity && <CelebrityLabel />}
+						{item.coupon && <CouponLabel />}
+						{item.only && <OnlyLabel />}
+					</dl>
+				</div>
+			</Link>
+		</>
+	);
+}
+
+export default ProductInfo;
+```
 
 </br>
 
