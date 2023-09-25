@@ -60,30 +60,30 @@ function ProductCategoryItem() {
 							id="button"
 							type="button"
 							aria-label="플러스"
-							className="float-right mr-2 mt-3 block h-[9px] w-[9px]"
+							className="float-right mr-2 mt-3 block h-[9px] w-[9px] bg-sprite01"
 							style={{
-								backgroundImage: `url("../../public/common/sprīt.png")`,
 								backgroundPositionX: buttonStyles[index] || '0',
 								backgroundPositionY: '-60px',
 								backgroundRepeat: 'no-repeat',
 							}}
 							onClick={() => handleButtonClick(index)}
 						></button>
-						{/* 카테고리 제목에 링크를 추가합니다 */}
-						<Link to={`/categoryBrand/${category.entit}`} onClick={() => setActiveItem(category.title)}>
-							<dl key={`${index}-title`}>
-								<dt className="sr-only" aria-label="제목"></dt>
-								<dd className={`item ${activeItem === category.title ? 'item-active' : ''}`}>{category.title}</dd>
-							</dl>
-						</Link>
 					</a>
-
+					{/* 카테고리 제목에 링크를 추가합니다 */}
+					<Link className="text-lg font-bold" to={`/categoryBrand/${category.entit}`} onClick={() => setActiveItem(category.title)}>
+						<dl key={`${index}-title`}>
+							<dt className="sr-only" aria-label="제목"></dt>
+							<dd className={`item ${activeItem === category.title ? 'item-active' : ''}`}>{category.title}</dd>
+						</dl>
+					</Link>
 					{/* 카테고리 부제목에 링크를 추가합니다 */}
 					{category.items.map((item, id) => (
 						<Link to={`/categoryBrand/${category.eitems && category.eitems[id]}`} key={`${index}-${id}`} onClick={() => setActiveItem(item)}>
 							<dl>
 								<dt className="sr-only" aria-label="부제목"></dt>
-								<dd className="ml-2 hover:scale-110">{item}</dd>
+								<motion.dd className={`item ml-2 ${activeItem === item ? 'item-active' : ''} ${isItemsVisible[index] ? '' : 'hidden'}`} whileHover={{opacity: 0.9}}>
+									{item}
+								</motion.dd>
 							</dl>
 						</Link>
 					))}

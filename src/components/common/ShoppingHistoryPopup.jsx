@@ -5,10 +5,10 @@ import {useQuery} from '@tanstack/react-query';
 import {motion} from 'framer-motion';
 import {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
-import Spinner from './Spinner';
+import Spinner from '@/components/common/Spinner';
 import close from '/public/common/popup_close.svg';
 
-const fetchItems = async () => {
+const fetchItems = async () => {//
 	return await pb.collection('products').getFullList();
 };
 
@@ -18,7 +18,7 @@ function ShoppingHistoryPopup({isOpen, setIsOpen}) {
 
 	const currentHistory = JSON.parse(localStorage.getItem('recentlyViewed')) || [];
 
-	const {data, isError, error} = useQuery({
+	const {data, isError, error} = useQuery({//
 		queryKey: ['products'],
 		queryFn: fetchItems,
 		retry: 2,
@@ -26,7 +26,7 @@ function ShoppingHistoryPopup({isOpen, setIsOpen}) {
 		refetchOnReconnect: false,
 	});
 
-	useEffect(() => {
+	useEffect(() => {//
 		if (data) {
 			const filterdData = data.filter((item) => currentHistory.includes(item.id));
 

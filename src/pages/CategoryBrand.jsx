@@ -8,7 +8,7 @@ import {Helmet} from 'react-helmet-async';
 import {useQuery} from '@tanstack/react-query';
 import Spinner from '@/components/common/Spinner';
 
-const getProducts = async () => {
+const getProducts = async () => {//
 	return await pb.collection('products').getFullList();
 };
 
@@ -49,7 +49,7 @@ function CategoryBrand() {
 		});
 	};
 
-	const {isLoading, data, isError, error} = useQuery({
+	const {isLoading, data, isError, error} = useQuery({//
 		queryKey: ['products'],
 		queryFn: getProducts,
 		retry: 2,
@@ -57,13 +57,15 @@ function CategoryBrand() {
 		refetchOnReconnect: false,
 	});
 
-	useEffect(() => {
-		if (data) {
-			const brandList = Array.from(new Set(data.map((product) => product.brand)));
-			setBrands(brandList);
-			setProducts(data);
-		}
-	}, data);
+  useEffect(() => {
+    if (data) {
+      const brandList = Array.from(
+        new Set(data.map((product) => product.brand))
+      );
+      setBrands(brandList);
+      setProducts(data);
+    }
+  }, [data]);
 
 	// if (isLoading) {
 	// 	return (

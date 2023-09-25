@@ -1,5 +1,5 @@
 import ProductInfo from '@/components/common/ProductInfo';
-
+import Spinner from '@/components/common/Spinner';
 
 /**
  *  ProductItems component
@@ -20,7 +20,7 @@ function ProductItems({data}) {
 						);
 					})
 				) : (
-					<div>ERROR</div>
+					<Spinner />
 				)}
 			</div>
 		</>

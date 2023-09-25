@@ -7,7 +7,7 @@ import {Link} from 'react-router-dom';
  *  ProductFilterList component
  * */
 
-function ProductFilterList({brands, onFilter, onAssign, onReset}, ref) {
+function ProductFilterList({brands, onFilter, onAssign, onReset, id}, ref) {
 	const [activeFilter, setActiveFilter] = useState('BRAND');
 
 	return (
@@ -40,13 +40,11 @@ function ProductFilterList({brands, onFilter, onAssign, onReset}, ref) {
 			</div>
 
 			<div ref={ref} className="bg-[#fbfbfb] p-8">
-				<ul className="brand mb-8 flex flex-wrap border border-grey-100 bg-white px-4 py-6">
+				<ul className="mb-8 flex flex-wrap border border-grey-100 bg-white px-4 py-6">
 					{brands.map((brandName) => (
-						<>
 							<li key={brandName} className="flex pl-4">
 								{activeFilter === 'BRAND' && <ProductFilterBrand brandName={brandName} onFilter={onFilter} />}
 							</li>
-						</>
 					))}
 				</ul>
 
