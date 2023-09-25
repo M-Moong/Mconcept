@@ -85,13 +85,13 @@
 
 
 #### Package Manager
-<img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white" /> <img src="https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=JSON&logoColor=white" />
+<img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white" /> <img src="https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=JSON&logoColor=white" /> <img src="https://img.shields.io/badge/vite-ACF3FF?style=for-the-badge&logo=vite&logoColor=black">
 
 #### Git
 <img src="https://img.shields.io/badge/Git-E34F26?style=for-the-badge&logo=Git&logoColor=white" /> <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white" />
 
 #### Tools
-<img src="https://img.shields.io/badge/pocketbase-FF5675?style=for-the-badge&logo=pocketbase&logoColor=white"> <img src="https://img.shields.io/badge/FramerMotion-0055FF?style=for-the-badge&logo=framer&logoColor=white"> <img src="https://img.shields.io/badge/vite-ACF3FF?style=for-the-badge&logo=vite&logoColor=black"> <img src="https://img.shields.io/badge/reactrouter-000069?style=for-the-badge&logo=reactrouter&logoColor=white"> <img src="https://img.shields.io/badge/TanStackQuery-FF5675?style=for-the-badge&logo=reactquery&logoColor=white">
+<img src="https://img.shields.io/badge/pocketbase-FF5675?style=for-the-badge&logo=pocketbase&logoColor=white"> <img src="https://img.shields.io/badge/FramerMotion-0055FF?style=for-the-badge&logo=framer&logoColor=white"> <img src="https://img.shields.io/badge/reactrouter-000069?style=for-the-badge&logo=reactrouter&logoColor=white"> <img src="https://img.shields.io/badge/TanStackQuery-FF5675?style=for-the-badge&logo=reactquery&logoColor=white">
 
 #### Setting
 <img src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=ESLint&logoColor=white" /> <img src="https://img.shields.io/badge/Prettier-20B2AA?style=for-the-badge&logo=Prettier&logoColor=white" />
