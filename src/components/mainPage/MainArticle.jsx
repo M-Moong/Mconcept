@@ -80,8 +80,8 @@ function MainArticle() {
 							);
 						})}
 						{/* 이전, 다음 버튼 */}
-						<div className="swiper-button-prev" id="pnavi"></div>
-						<div className="swiper-button-next" id="nnavi"></div>
+						<button className="swiper-button-prev" id="pnavi" aria-label='이전 탐색'></button>
+						<button className="swiper-button-next" id="nnavi" aria-label='다음 탐색'></button>
 						{/* 일시정지 버튼 */}
 						<button onClick={handlePause} className="swiperPause" aria-label="일시정지">
 							<FaPause className="faPause" />
